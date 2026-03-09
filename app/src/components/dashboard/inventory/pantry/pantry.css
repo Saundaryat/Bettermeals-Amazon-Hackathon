@@ -1,0 +1,178 @@
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+.pantry-container {
+    @apply max-w-6xl mx-auto;
+}
+
+.pantry-spacer {
+    @apply h-24;
+}
+
+.pantry-main-header {
+    /* @apply flex flex-col sm:flex-row justify-between items-end gap-6 my-6; */
+    @apply flex flex-col sm:flex-row justify-end items-end mb-6;
+}
+
+.pantry-main-title {
+    @apply text-3xl font-bold text-gray-900 tracking-tight;
+}
+
+.pantry-main-desc {
+    @apply text-gray-500 text-base text-center mt-0;
+}
+
+.pantry-main-desc-secondary {
+    @apply text-gray-500 mt-2 text-xs;
+}
+
+.pantry-update-btn {
+    @apply flex items-center space-x-2 bg-gray-900 text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-black transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+}
+
+.pantry-empty-state {
+    @apply text-center py-24 bg-gray-50/50 rounded-[2rem] border-2 border-dashed border-gray-200;
+}
+
+.pantry-empty-icon-container {
+    @apply bg-white p-6 rounded-full inline-block mb-6 shadow-sm ring-1 ring-gray-100;
+}
+
+.pantry-empty-icon {
+    @apply w-12 h-12 text-gray-400;
+}
+
+.pantry-empty-title {
+    @apply text-2xl font-bold text-gray-900 mb-3;
+}
+
+.pantry-empty-desc {
+    @apply text-gray-500 mb-8 max-w-md mx-auto text-lg;
+}
+
+.pantry-setup-btn {
+    @apply bg-gray-900 hover:bg-black text-white px-8 py-3.5 rounded-full font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+}
+
+.pantry-sections-container {
+    @apply space-y-16;
+}
+
+/* Category Filter Pills */
+.pantry-category-filter-container {
+    @apply mb-6;
+}
+
+.pantry-category-filter-scroll {
+    @apply flex gap-2 overflow-x-auto scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0;
+}
+
+.pantry-category-filter-btn {
+    @apply px-3 py-1.5 rounded-full text-xs font-medium transition-all whitespace-nowrap;
+}
+
+.pantry-category-filter-btn-active {
+    @apply bg-gray-900 text-white shadow-sm;
+}
+
+.pantry-category-filter-btn-inactive {
+    @apply bg-gray-100 text-gray-600 hover:bg-gray-200;
+}
+
+.pantry-category-filter-count {
+    @apply ml-1.5 text-[10px];
+}
+
+.pantry-category-filter-count-active {
+    @apply text-white/70;
+}
+
+.pantry-category-filter-count-inactive {
+    @apply text-gray-400;
+}
+
+/* PantrySection Styles */
+.pantry-grid {
+    @apply grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4;
+}
+
+/* PantryItem Styles */
+.pantry-item-card {
+    @apply relative bg-white border border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer hover:shadow-xl hover:border-gray-200 hover:-translate-y-1;
+}
+
+.pantry-item-card-active {
+    @apply border-gray-900 ring-1 ring-gray-900;
+}
+
+.pantry-item-image-container {
+    @apply aspect-[4/3] relative bg-gray-50 flex items-center justify-center overflow-hidden;
+}
+
+.pantry-item-image {
+    @apply w-full h-full object-cover transition-transform duration-700 group-hover:scale-110;
+}
+
+.pantry-item-placeholder-container {
+    @apply w-full h-full flex items-center justify-center bg-gray-50 text-gray-300;
+}
+
+.pantry-item-placeholder-icon {
+    @apply opacity-30;
+}
+
+.pantry-item-check-container {
+    @apply absolute top-3 right-3 transition-all duration-300 z-10;
+}
+
+.pantry-item-check-active {
+    @apply text-white fill-gray-900 drop-shadow-md scale-110;
+}
+
+.pantry-item-check-inactive {
+    @apply text-gray-300/50 fill-white/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+}
+
+.pantry-item-content {
+    @apply p-3;
+}
+
+.pantry-item-title {
+    @apply text-xs text-gray-900 line-clamp-2 leading-tight;
+}
+
+.pantry-item-subtitle {
+    @apply text-[11px] text-gray-500 uppercase tracking-wider font-semibold;
+}
+
+/* View Toggle Styles - Matching Groceries Header */
+.pantry-view-toggle-container {
+    @apply flex justify-center;
+}
+
+.pantry-view-toggle-wrapper {
+    @apply flex space-x-2 bg-black/5 rounded-lg p-1 w-full lg:w-fit lg:min-w-[300px];
+}
+
+.pantry-view-toggle-item {
+    @apply flex-1 px-3 lg:px-6 py-1 rounded-md text-xs lg:text-base font-medium transition-all flex items-center justify-center md:whitespace-nowrap;
+    min-width: 0;
+    flex-basis: 0;
+}
+
+.pantry-view-toggle-item[data-state=on] {
+    @apply !bg-[#f7e6cf] text-black shadow-sm;
+}
+
+.pantry-view-toggle-item[data-state=off] {
+    @apply text-black/70 hover:text-black hover:bg-black/10;
+}

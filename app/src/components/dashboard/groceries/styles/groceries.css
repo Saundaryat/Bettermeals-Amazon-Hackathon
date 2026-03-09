@@ -1,0 +1,390 @@
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+/* Groceries Page */
+.groceries-page {
+    @apply bg-white p-4 lg:p-6 pb-24;
+}
+
+.groceries-container {
+    @apply max-w-6xl mx-auto;
+}
+
+.groceries-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6 items-start max-w-4xl mx-auto;
+}
+
+.groceries-empty-state {
+    @apply text-center py-12;
+}
+
+.groceries-empty-icon {
+    @apply w-16 h-16 mx-auto mb-4 text-black/30;
+}
+
+.groceries-empty-title {
+    @apply text-lg font-semibold text-black mb-2;
+}
+
+.groceries-empty-desc {
+    @apply text-black/70 mb-4;
+}
+
+/* Category Filter */
+.category-filter-container {
+    @apply mb-6;
+}
+
+.category-filter-scroll {
+    @apply flex gap-2 overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4 lg:mx-0 lg:px-0;
+}
+
+.category-filter-btn {
+    @apply px-3 py-1.5 rounded-full text-xs font-medium transition-all whitespace-nowrap;
+}
+
+.category-filter-btn-active {
+    @apply bg-black text-white shadow-sm;
+}
+
+.category-filter-btn-inactive {
+    @apply bg-gray-100 text-gray-600 hover:bg-gray-200;
+}
+
+.category-filter-count {
+    @apply ml-1.5 text-[10px];
+}
+
+.category-filter-count-active {
+    @apply text-white/70;
+}
+
+.category-filter-count-inactive {
+    @apply text-gray-400;
+}
+
+/* Groceries Header */
+.groceries-header-tabs-container {
+    @apply mb-2 lg:mb-4 flex justify-center;
+}
+
+.groceries-header-tabs-wrapper {
+    @apply flex space-x-2 bg-black/5 rounded-lg p-1 w-full lg:w-fit lg:min-w-[300px];
+}
+
+.groceries-header-tab {
+    @apply flex-1 px-3 lg:px-4 py-2 rounded-md text-xs lg:text-sm font-medium transition-all flex items-center justify-center;
+}
+
+.groceries-header-tab-active {
+    @apply bg-[#f7e6cf] text-black shadow-sm;
+}
+
+.groceries-header-tab-inactive {
+    @apply text-black/70 hover:text-black hover:bg-black/10;
+}
+
+.groceries-header-desc-container {
+    @apply mb-6 lg:mb-8 flex justify-center;
+}
+
+.groceries-header-desc {
+    @apply text-black/70 text-sm lg:text-base text-center;
+}
+
+/* Grocery Actions */
+.grocery-actions-container {
+    @apply flex justify-center;
+}
+
+.grocery-actions-btn {
+    @apply bg-[#F7E6CF] hover:bg-[#F7E6CF]/90 text-black px-8 py-3 rounded-full font-medium transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl active:scale-95 text-sm lg:text-base w-full sm:w-auto pointer-events-auto;
+}
+
+.grocery-actions-icon {
+    @apply w-5 h-5;
+}
+
+/* Grocery Category */
+.grocery-category-card {
+    @apply bg-white border border-black/10 rounded-xl overflow-hidden shadow-sm h-full flex flex-col;
+}
+
+.grocery-category-header {
+    @apply border-b border-black/5 px-4 py-4 flex justify-between items-baseline shrink-0;
+}
+
+.grocery-category-title {
+    @apply text-xl font-bold text-black tracking-tight;
+}
+
+.grocery-category-count {
+    @apply text-sm font-medium text-black/40;
+}
+
+.grocery-category-list-container {
+    @apply p-2 overflow-y-auto max-h-[300px];
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+}
+
+.grocery-category-list-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.grocery-category-list-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.grocery-category-list-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.grocery-category-list {
+    @apply space-y-1;
+}
+
+/* Grocery Item */
+.grocery-item-container {
+    @apply flex items-center space-x-3 p-2 rounded-2xl transition-all cursor-pointer;
+}
+
+/* Removed background highlight per user request */
+
+.grocery-item-avatar-wrapper {
+    @apply relative w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center overflow-visible shrink-0 border border-black/5;
+}
+
+.grocery-item-avatar-img {
+    @apply w-full h-full object-cover;
+}
+
+.grocery-item-avatar-check {
+    @apply w-full h-full flex items-center justify-center bg-white;
+}
+
+.grocery-item-checkmark-badge {
+    @apply absolute -top-1 -right-1 w-4 h-4 bg-[#51754f] rounded-full flex items-center justify-center border-2 border-white z-10;
+}
+
+.grocery-item-content {
+    @apply flex-1 min-w-0 flex flex-col justify-center;
+}
+
+.grocery-item-header {
+    @apply flex flex-wrap items-center gap-1;
+}
+
+.grocery-item-name {
+    @apply font-bold text-base leading-tight text-black;
+}
+
+.grocery-item-name-checked {
+    @apply line-through opacity-40;
+}
+
+.grocery-item-name-unchecked {
+    @apply text-black/90;
+}
+
+.grocery-item-tag {
+    @apply px-2 py-0.5 text-[10px] font-bold leading-none rounded-full ml-2;
+}
+
+.grocery-item-tag-optional {
+    @apply bg-green-50 text-green-700 border-none;
+}
+
+.grocery-item-tag-perishable {
+    @apply bg-[#feedea] text-[#8a3324] border-none;
+}
+
+.grocery-item-tag-staple {
+    @apply bg-gray-100 text-gray-600 border-none;
+}
+
+.grocery-item-details {
+    @apply flex items-center gap-2 mt-0.5;
+}
+
+.grocery-item-quantity {
+    @apply text-xs font-medium text-black/50;
+}
+
+.grocery-item-quantity-checked {
+    @apply opacity-30;
+}
+
+.grocery-item-quantity-unchecked {
+    @apply text-black/50;
+}
+
+.grocery-item-dot {
+    @apply text-[10px] text-black/20;
+}
+
+.grocery-item-subcategory {
+    @apply text-[10px];
+}
+
+.grocery-item-subcategory-checked {
+    @apply text-black/50;
+}
+
+.grocery-item-subcategory-unchecked {
+    @apply text-black/20;
+}
+
+/* Instructions Panel */
+.grocery-instructions-panel {
+    @apply bg-[#f7e6cf]/20 border border-[#f7e6cf] rounded-2xl p-4 mb-8 flex items-start space-x-3 max-w-4xl mx-auto;
+}
+
+.grocery-instructions-icon {
+    @apply text-[#b38a58] mt-0.5 shrink-0;
+}
+
+.grocery-instructions-content {
+    @apply flex-1;
+}
+
+.grocery-instructions-title {
+    @apply text-sm font-bold text-[#8a6a43] mb-1;
+}
+
+.grocery-instructions-text {
+    @apply text-xs text-[#8a6a43]/80 leading-relaxed;
+}
+
+/* Grocery Generator */
+.grocery-generator-container {
+    @apply flex flex-col items-center justify-center py-16 px-4 text-center bg-gray-50 rounded-xl border-2 border-dashed border-gray-200;
+}
+
+.grocery-generator-icon-wrapper {
+    @apply bg-white p-4 rounded-full shadow-sm mb-4;
+}
+
+.grocery-generator-icon {
+    @apply w-12 h-12 text-gray-400;
+}
+
+.grocery-generator-title {
+    @apply text-xl font-semibold text-gray-900 mb-2;
+}
+
+.grocery-generator-desc {
+    @apply text-gray-500 max-w-md mb-8;
+}
+
+.grocery-generator-btn {
+    @apply flex items-center space-x-2 px-6 py-3 rounded-lg font-medium shadow-md transition-all;
+}
+
+.grocery-generator-btn-generating {
+    @apply bg-[#f7e6cf]/90 cursor-not-allowed;
+}
+
+.grocery-generator-btn-active {
+    @apply bg-[#f7e6cf]/90 hover:bg-[#f7e6cf] hover:shadow-lg active:transform active:scale-95;
+}
+
+.grocery-generator-spinner {
+    @apply w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin;
+}
+
+/* Inventory View */
+.inventory-view-container {
+    @apply space-y-4 lg:space-y-6;
+}
+
+.inventory-view-card {
+    @apply text-center py-12 bg-black/5 rounded-xl;
+}
+
+.inventory-view-icon {
+    @apply w-16 h-16 mx-auto mb-4 text-black/30;
+}
+
+.inventory-view-title {
+    @apply text-lg font-semibold text-black mb-2;
+}
+
+.inventory-view-desc {
+    @apply text-black/70 mb-4;
+}
+
+.inventory-view-btn {
+    @apply bg-[#51754f] hover:bg-[#51754f]/90 text-white px-6 py-3 rounded-lg font-medium transition-colors;
+}
+
+/* Inventory Item */
+.inventory-section {
+    @apply mb-8;
+}
+
+.inventory-section-header {
+    @apply mb-4;
+}
+
+.inventory-section-title {
+    @apply text-lg font-semibold text-black;
+}
+
+.inventory-section-desc {
+    @apply text-sm text-black/60;
+}
+
+.inventory-grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3;
+}
+
+.inventory-item-container {
+    @apply relative bg-white border border-black/10 rounded-xl overflow-hidden transition-all cursor-pointer hover:shadow-md;
+}
+
+.inventory-item-has {
+    @apply border-[#51754f] bg-[#51754f]/5;
+}
+
+.inventory-item-image-wrapper {
+    @apply aspect-square relative bg-gray-50 flex items-center justify-center overflow-hidden;
+}
+
+.inventory-item-image {
+    @apply w-full h-full object-cover;
+}
+
+.inventory-item-placeholder {
+    @apply w-full h-full flex items-center justify-center bg-gray-100 text-gray-300;
+}
+
+.inventory-item-status-icon {
+    @apply absolute top-2 right-2 transition-transform duration-200;
+}
+
+.inventory-item-container:active .inventory-item-status-icon {
+    @apply scale-90;
+}
+
+.inventory-item-details {
+    @apply p-3;
+}
+
+.inventory-item-name {
+    @apply text-sm font-medium text-black truncate leading-tight mb-1;
+}
+
+.inventory-item-meta {
+    @apply text-[10px] text-black/50 uppercase tracking-wide font-medium;
+}
