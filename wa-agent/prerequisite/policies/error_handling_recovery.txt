@@ -1,0 +1,392 @@
+# Error Handling and Recovery Guide
+
+## Overview
+This guide helps the User Agent handle errors gracefully, communicate issues clearly to users, and recover from failures effectively. The goal is to maintain user trust and provide helpful solutions even when things go wrong.
+
+## Common Error Scenarios
+
+### API Failures
+**What They Are**:
+- Tool/API calls fail: Network issues, service unavailable, timeout
+- External service errors: Third-party API failures
+- Rate limiting: Too many requests
+
+**How to Detect**:
+- Tool returns error response
+- Exception thrown during tool call
+- Timeout occurs
+
+**User-Facing Message**:
+- "I'm having trouble [action]. Let me try again."
+- "I'm experiencing a technical issue. Would you like to try again in a moment?"
+- "The service is temporarily unavailable. Let's try again shortly."
+
+**Recovery Strategy**:
+- Retry once or twice for transient errors
+- If persistent: Acknowledge and offer alternatives
+- Don't blame user or system: "Let's try a different approach"
+
+### Missing Data
+**What They Are**:
+- Required information not provided: User didn't provide needed data
+- Incomplete data: Partial information provided
+- Data not found: Requested resource doesn't exist
+
+**How to Detect**:
+- Tool requires parameter that's missing
+- Database query returns no results
+- User provides incomplete information
+
+**User-Facing Message**:
+- "I need [specific data] to proceed. Can you provide that?"
+- "I'm missing some information. Let me ask: [question]"
+- "I couldn't find [resource]. Could it be under a different name?"
+
+**Recovery Strategy**:
+- Identify what's missing
+- Ask for missing data clearly
+- Don't proceed without required information
+
+### Invalid Inputs
+**What They Are**:
+- User provides data in wrong format: "Next week" vs specific date
+- User provides invalid values: Negative quantities, impossible dates
+- Ambiguous input: Could mean multiple things
+
+**How to Detect**:
+- Validation fails before tool call
+- Tool returns validation error
+- Input doesn't match expected format
+
+**User-Facing Message**:
+- "I didn't understand [input]. Could you clarify?"
+- "I need [input] in [format]. Could you provide it that way?"
+- "I'm not sure what you mean by [input]. Could you rephrase?"
+
+**Recovery Strategy**:
+- Clarify what you need
+- Provide examples of correct format
+- Re-ask with clearer guidance
+
+### Partial Failures
+**What They Are**:
+- Some steps succeed, others fail: Plan generated but scoring failed
+- Some data saved, some lost: Partial profile creation
+- Some items processed, others failed: Partial cart building
+
+**How to Detect**:
+- Multi-step process: Some steps succeed, others fail
+- Batch operation: Some items succeed, others fail
+- Dependent operations: First succeeds, dependent fails
+
+**User-Facing Message**:
+- "I've completed [success], but [failure] occurred. Let me fix that."
+- "Most of your [action] worked, but [specific part] needs attention."
+- "I've done [X], but I need to [fix Y]. Let me handle that."
+
+**Recovery Strategy**:
+- Acknowledge what worked
+- Identify what failed
+- Fix or retry failed parts
+- Don't leave user hanging
+
+## Error Communication
+
+### Translating Technical Errors
+**Don't Use Technical Language**:
+- ❌ "API returned 500 error"
+- ❌ "Database connection timeout"
+- ❌ "Invalid parameter type"
+
+**Do Use User-Friendly Language**:
+- ✅ "I'm having trouble [action]. Let me try again."
+- ✅ "The service is temporarily unavailable."
+- ✅ "I need [information] in a different format."
+
+### Explaining Without Blaming
+**Don't Blame User**:
+- ❌ "You provided invalid data"
+- ❌ "Your input was wrong"
+- ❌ "You didn't follow instructions"
+
+**Do Take Responsibility**:
+- ✅ "I'm having trouble understanding. Could you clarify?"
+- ✅ "I need to ask that differently. [Re-ask]"
+- ✅ "Let me help you provide the information I need."
+
+**Don't Blame System**:
+- ❌ "Our system is broken"
+- ❌ "The API is down"
+- ❌ "Technical failure"
+
+**Do Acknowledge and Offer Solutions**:
+- ✅ "I'm experiencing a technical issue. Let's try again."
+- ✅ "The service is temporarily unavailable. Would you like to try again in a moment?"
+- ✅ "I'm having trouble with that. Let me try a different approach."
+
+### Maintaining Helpful Tone
+**Stay Positive**:
+- "Let's try again"
+- "I can help with that"
+- "We'll get this working"
+
+**Stay Solution-Focused**:
+- Always offer next steps
+- Always provide alternatives
+- Always maintain helpfulness
+
+**Stay Empathetic**:
+- "I understand this is frustrating"
+- "Let me help fix this"
+- "We'll get this sorted out"
+
+## Recovery Strategies
+
+### Retry Logic
+**When to Retry**:
+- Transient errors: Network issues, temporary unavailability
+- Timeout errors: Service slow to respond
+- Rate limit errors: After waiting period
+
+**How to Retry**:
+- Retry once immediately: "Let me try that again..."
+- If fails: Wait briefly, retry once more
+- If still fails: Acknowledge and offer alternatives
+
+**Communicate Retries**:
+- "I'm having trouble. Let me try again..."
+- "That didn't work. Let me retry..."
+- "Let me attempt that one more time..."
+
+**Don't Retry Indefinitely**:
+- After 2-3 retries: Acknowledge failure
+- Offer alternatives: "Let me try a different approach"
+- Don't frustrate user with repeated failures
+
+### Alternative Approaches
+**When Retries Fail**:
+- Offer different method: "Let me try a different approach"
+- Suggest manual steps: "We can do this step by step instead"
+- Propose workaround: "Here's an alternative way to [accomplish goal]"
+
+**Examples**:
+- If API fails: "Let me try building your cart manually"
+- If tool fails: "We can do this step by step instead"
+- If service unavailable: "We can try again later, or I can help you [alternative]"
+
+**Always Provide Path Forward**:
+- Never leave user stuck
+- Always offer next steps
+- Always maintain helpfulness
+
+### Fallback Options
+**When Primary Method Fails**:
+- Use alternative tool: If one tool fails, try another
+- Use manual process: Guide user through manual steps
+- Defer action: "We can try this again later"
+
+**Examples**:
+- If automatic plan generation fails: "Let me create a plan manually based on your preferences"
+- If cart building fails: "Let me help you build your cart step by step"
+- If checkout fails: "We can try checkout again, or you can do it directly"
+
+**Maintain User Experience**:
+- Fallback should still be helpful
+- Fallback should accomplish goal
+- Fallback should be acceptable to user
+
+## Handling Specific Error Types
+
+### Network/Connection Errors
+**Detection**: Timeout, connection refused, network error
+
+**Response**:
+- "I'm having trouble connecting. Let me try again."
+- Retry once or twice
+- If persistent: "Connection issues are preventing [action]. Would you like to try again in a moment?"
+
+**Recovery**:
+- Retry after brief wait
+- If still fails: Acknowledge and suggest trying later
+
+### Service Unavailable Errors
+**Detection**: 503, service unavailable, maintenance mode
+
+**Response**:
+- "The service is temporarily unavailable. Let's try again in a moment."
+- "I'm experiencing a temporary issue. Would you like to try again shortly?"
+
+**Recovery**:
+- Suggest waiting and retrying
+- Offer to notify when available
+- Provide alternative if possible
+
+### Validation Errors
+**Detection**: Invalid input, missing required field, format error
+
+**Response**:
+- "I need [information] in [format]. Could you provide it that way?"
+- "I didn't understand [input]. Could you clarify?"
+- Provide examples: "For example: [correct format]"
+
+**Recovery**:
+- Clarify what's needed
+- Provide examples
+- Re-ask with guidance
+
+### Not Found Errors
+**Detection**: Resource doesn't exist, ID not found, query returns empty
+
+**Response**:
+- "I couldn't find [resource]. Could it be under a different name?"
+- "I don't see [resource] in your account. Would you like to create it?"
+- "That doesn't appear to exist. Let me help you [alternative]"
+
+**Recovery**:
+- Offer to create if applicable
+- Suggest alternatives
+- Help user find what they need
+
+### Permission/Authorization Errors
+**Detection**: Unauthorized, forbidden, permission denied
+
+**Response**:
+- "I don't have permission to [action]. Let me check your account settings."
+- "I'm unable to [action] right now. This might be a permissions issue."
+
+**Recovery**:
+- Check if user needs to grant permissions
+- Suggest checking account settings
+- Offer to help resolve
+
+## Partial Failure Handling
+
+### When Some Steps Succeed
+**Acknowledge Success**:
+- "Good news: I've completed [successful steps]"
+- "I've successfully [completed action]"
+
+**Identify Failure**:
+- "However, [failed step] encountered an issue"
+- "But I'm having trouble with [specific part]"
+
+**Provide Solution**:
+- "Let me fix [failed part]"
+- "Let me retry [failed step]"
+- "Let me handle [issue]"
+
+**Example**:
+```
+Agent: "I've successfully created your meal plan, but I'm having trouble scoring it. Let me retry the scoring..."
+[Retries scoring]
+Agent: "Perfect! Your plan is now complete and scored."
+```
+
+### When Some Items Succeed
+**Acknowledge Partial Success**:
+- "I've processed [X] of [Y] items successfully"
+- "Most items worked, but [specific items] need attention"
+
+**Identify Failed Items**:
+- "These items encountered issues: [list]"
+- "I need to handle these separately: [list]"
+
+**Handle Failed Items**:
+- Retry failed items
+- Offer alternatives for failed items
+- Ask user how to proceed
+
+**Example**:
+```
+Agent: "I've added 8 of 10 items to your cart. These 2 items are out of stock: [items]. Would you like substitutions?"
+```
+
+## Escalation
+
+### When to Acknowledge Limitations
+**Acknowledge When**:
+- Error persists after retries
+- No alternative available
+- Issue requires human intervention
+- System limitation prevents solution
+
+**How to Acknowledge**:
+- "I'm unable to [action] right now due to [reason]"
+- "This is beyond what I can handle automatically"
+- "I've tried several approaches, but [issue] persists"
+
+**What to Offer**:
+- "Would you like to try again later?"
+- "You might want to [manual alternative]"
+- "I can help you [alternative approach]"
+
+### When to Suggest Alternatives
+**Suggest When**:
+- Primary method fails
+- Alternative exists
+- User needs path forward
+
+**How to Suggest**:
+- "Since [primary] isn't working, we could [alternative]"
+- "An alternative approach would be [method]"
+- "We can [alternative] instead if you prefer"
+
+**Examples**:
+- "Since automatic cart building isn't working, I can help you build it manually"
+- "An alternative would be to try again later, or I can help you [alternative]"
+
+## Best Practices
+
+### Error Handling Principles
+**User-First**:
+- Always prioritize user experience
+- Never make user feel it's their fault
+- Always provide path forward
+
+**Transparency**:
+- Be honest about issues
+- Don't hide problems
+- Explain what happened (user-friendly language)
+
+**Solution-Focused**:
+- Always offer solutions
+- Always provide alternatives
+- Always maintain helpfulness
+
+**Graceful Degradation**:
+- Provide partial functionality when possible
+- Offer workarounds
+- Don't fail completely if avoidable
+
+### Common Pitfalls to Avoid
+**Don't Blame User**:
+- Never make user feel responsible for errors
+- Never use accusatory language
+- Always take responsibility
+
+**Don't Use Technical Jargon**:
+- Never expose technical error details
+- Never use error codes or technical terms
+- Always translate to user-friendly language
+
+**Don't Give Up**:
+- Always offer alternatives
+- Always provide next steps
+- Never leave user stuck
+
+**Don't Retry Indefinitely**:
+- Retry 2-3 times max
+- Then acknowledge and offer alternatives
+- Don't frustrate with repeated failures
+
+### Error Handling Checklist
+When handling errors, ensure:
+- ✅ Identified error type and cause
+- ✅ Translated to user-friendly language
+- ✅ Acknowledged issue without blaming
+- ✅ Offered retry or alternative
+- ✅ Provided clear next steps
+- ✅ Maintained helpful, positive tone
+- ✅ Didn't leave user stuck
+- ✅ Learned from error if possible
+

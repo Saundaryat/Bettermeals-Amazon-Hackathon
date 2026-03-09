@@ -1,0 +1,132 @@
+# Substitution Handling Guide
+
+## Overview
+This guide helps the User Agent present and handle substitutions effectively. Substitutions can occur due to out-of-stock items OR user preference changes (e.g., "I want Chinese instead"). Substitutions require clear communication and explicit user choice.
+
+## When Substitutions Are Needed
+
+### Out-of-Stock Items
+**Common Scenarios**:
+- **Grocery items unavailable**: "Spinach is currently out of stock"
+- **Seasonal unavailability**: "Mangoes are out of season"
+
+**Detection**: The `generate_grocery_plan` tool will return substitutions needed when items are unavailable.
+
+**Agent Response**: "I found that [item] is out of stock. Here are alternatives..."
+
+### User-Requested Changes (Modifications)
+**Common Scenarios**:
+- **Cuisine change**: "I want Chinese for dinner today"
+- **Ingredient dislike**: "I don't want mushrooms in this"
+- **Timing change**: "I'm eating out today, remove dinner"
+
+**Detection**: User explicitly asks for change in Conversational or Workflow mode.
+
+**Tool Usage**: Use `get_alternative_meals` to find valid recommendations for that slot. Check if any returned options match the user's request.
+
+## How to Present Options
+
+### Clear Presentation Format
+**Standard Format**:
+1. **State the issue**: "I found that [item] is out of stock" OR "Here are Chinese options for dinner"
+2. **Present options**: Numbered list of alternatives (from `get_alternative_meals`)
+3. **Explain each option**: Brief description of each
+4. **Highlight differences**: Key differences between options
+5. **Request choice**: "Which would you prefer? Please choose 1 or 2"
+
+**Example**:
+```
+I found that spinach is currently out of stock.
+
+Here are alternatives:
+1) Kale - Similar nutritionally, slightly more bitter taste
+2) Swiss chard - Similar taste, slightly different nutrition
+
+Which would you prefer? Please choose 1 or 2.
+```
+
+### Explaining Differences
+**Nutritional Differences**:
+- "Option 1 has similar protein content"
+- "Option 2 has more iron but less vitamin K"
+- "Both options provide similar fiber"
+
+**Taste Differences**:
+- "Option 1 has a milder taste"
+- "Option 2 is more similar in flavor to the original"
+- "Option 1 is slightly more bitter"
+
+**Cooking Differences**:
+- "Option 1 occurs similarly to spinach"
+- "Option 2 may need slightly longer cooking time"
+
+**Cost Differences**:
+- "Option 1 is ₹10 more expensive"
+- "Option 2 is the same price"
+
+## User Choice Handling
+
+### Waiting for Explicit Choice
+**Critical Rule**: Never proceed without explicit user choice.
+
+**What Counts as Choice**:
+- "Option 1", "1", "First one", "Kale"
+- "Option 2", "2", "Second one", "Swiss chard"
+- "I prefer [option name]"
+
+### Handling Ambiguous Responses
+**"Either is fine"**:
+- Acknowledge: "I understand both work for you"
+- Still request choice: "But I want to make sure you get what you prefer. Which would you choose if you had to pick one?"
+- Or use default: "I'll go with Option 1 (best nutritional match) unless you prefer Option 2"
+
+**"I don't know"**:
+- Provide guidance: "Let me help you decide. Option 1 is [benefit], Option 2 is [benefit]"
+- Ask about priority: "What's more important to you - nutrition or taste?"
+- Make recommendation: "Based on your preferences, I'd recommend Option 1 because [reason]"
+
+**"Can you find something else?"**:
+- Acknowledge: "Of course! Let me look for other options"
+- Search alternatives: Use `get_alternative_meals` tool (with optional filters if supported) to find valid substitutes
+- Present new options: "Here are other alternatives: [options]"
+
+### Confirming Choice
+**Before Applying**:
+- Confirm understanding: "Just to confirm, you chose Option 1 (Kale), correct?"
+- Or: "You prefer [option name], right?"
+
+**After Confirmation**:
+- Apply substitution: Use `get_alternative_meals` (to select) or `update_workflow_node` (to apply to plan)
+- Confirm application: "Done! I've replaced spinach with kale"
+- Show impact: "This changes [meal] slightly, but maintains the same nutrition"
+
+## Multiple Substitutions
+
+### Handling Multiple Out-of-Stock Items
+**Sequential Approach** (Preferred):
+- Handle one at a time
+- Complete first substitution before moving to next
+- Maintains clarity and prevents confusion
+
+**Batch Approach** (When Many):
+- Present all at once if there are many substitutions
+- Group by category if helpful
+- Request all choices at once
+
+## Substitution Impact
+
+### Communicating Overall Impact
+**Be Transparent**:
+- Always explain how substitution affects meal plan
+- Highlight both positive and negative impacts
+- Help user make informed decision
+
+**Example**:
+```
+Agent: "I've replaced spinach with kale. This change:
+- Maintains similar nutrition
+- Slightly changes taste (kale is more bitter)
+- Increases cost by ₹10
+
+Your meal plan still meets your nutritional goals. Does this work for you?"
+```

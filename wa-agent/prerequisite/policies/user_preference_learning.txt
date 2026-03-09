@@ -1,0 +1,260 @@
+# User Preference Learning Guide
+
+## Overview
+This guide helps the User Agent learn and understand nuanced, implicit user preferences that users may not explicitly state or even consciously know themselves. The goal is to create a seamless, personalized experience by incorporating these preferences into meal planning and recommendations.
+
+## Understanding Implicit Preferences
+
+### Texture Preferences
+Users often have strong but unstated preferences about food textures:
+- **Crunchy vs Soft**: Some users prefer crunchy foods (nuts, raw vegetables, crispy proteins) while others prefer soft textures (steamed vegetables, tender meats, creamy dishes)
+- **Crispy vs Tender**: Preference for crispy edges vs tender centers
+- **Smooth vs Chunky**: Preference for pureed/smooth textures vs chunky preparations
+- **Dry vs Saucy**: Some prefer dry preparations, others prefer saucy/gravy-based dishes
+
+**How to Learn**:
+- Observe which textures users request modifications for
+- Note patterns in meal modifications (e.g., always requests extra crunch)
+- Track feedback on meals with different textures
+- Ask subtle questions: "Would you prefer this crispy or tender?"
+
+### Meal Timing Preferences
+Users have implicit preferences about what foods belong at which times:
+- **Breakfast preferences**: Some don't like pulses/legumes at breakfast, prefer lighter options
+- **Lunch preferences**: May prefer heavier, more substantial lunches
+- **Dinner preferences**: Often prefer lighter dinners, or specific comfort foods
+- **Snack timing**: Preferred snack times and types
+
+**How to Learn**:
+- Track what meals users skip or modify by time of day
+- Note patterns in meal requests by time
+- Observe calendar events and meal timing around them
+- Ask: "Do you prefer lighter or heavier breakfasts?"
+
+### Frequency Patterns
+Users have preferences about how often they want certain foods:
+- **Protein frequency**: Need chicken/fish/meat at least once every X days
+- **Variety vs repetition**: Some prefer trying new things, others prefer familiar favorites
+- **Comfort food frequency**: How often they want comfort foods vs adventurous meals
+- **Cuisine rotation**: Preference for rotating cuisines vs sticking to favorites
+
+**How to Learn**:
+- Track order history and meal request patterns
+- Note when users request "something different" vs "my usual"
+- Observe frequency of specific ingredient requests
+- Identify patterns in meal modifications (e.g., always swaps to chicken on day 3)
+
+### Context-Dependent Preferences
+Preferences often change based on context:
+- **Weekday vs Weekend**: Different preferences for work days vs rest days
+- **Seasonal preferences**: Lighter foods in summer, heavier in winter
+- **Activity-based**: Different preferences before/after workouts, work, social events
+- **Mood-based**: Comfort foods when stressed, lighter when relaxed
+
+**How to Learn**:
+- Correlate meal choices with calendar events
+- Track seasonal patterns in meal requests
+- Observe patterns around specific activities
+- Note when users request "comfort food" vs "healthy option"
+
+## Learning from User Behavior
+
+### Order History Patterns
+Analyze past orders to identify preferences:
+- **Most ordered items**: What do they consistently order?
+- **Never ordered items**: What do they consistently avoid?
+- **Modification patterns**: How do they typically modify meals?
+- **Substitution patterns**: What substitutions do they prefer?
+
+**Action Items**:
+- Review order history regularly
+- Identify top 10 most ordered items per user
+- Note items that appear in cart but are removed
+- Track successful vs unsuccessful meal experiences
+
+### Meal Modification Requests
+Modifications reveal preferences:
+- **Additions**: What do they frequently add? (extra protein, specific vegetables, spices)
+- **Removals**: What do they consistently remove? (onions, certain vegetables, specific proteins)
+- **Substitutions**: What substitutions do they request? (chicken instead of fish, rice instead of roti)
+- **Quantity changes**: Do they consistently increase/decrease portions?
+
+**Action Items**:
+- Track all modification requests
+- Identify patterns in additions/removals
+- Note successful modifications (ones that get repeated)
+- Ask follow-up questions when patterns emerge
+
+### Feedback Patterns
+Feedback reveals what users like and dislike:
+- **Positive feedback**: What meals get rated highly? What commonalities do they share?
+- **Negative feedback**: What meals get low ratings? What patterns emerge?
+- **Skip patterns**: What meals do users consistently skip?
+- **Repeat requests**: What meals do users request again?
+
+**Action Items**:
+- Correlate ratings with meal characteristics (cuisine, ingredients, preparation)
+- Identify patterns in skipped meals
+- Track which meals lead to repeat requests
+- Use feedback to refine preference understanding
+
+### Substitution Choices
+When items are out of stock, user choices reveal preferences:
+- **Preferred alternatives**: What substitutions do users consistently choose?
+- **Rejected alternatives**: What substitutions do users reject?
+- **Patterns**: Do they prefer similar items or completely different ones?
+
+**Action Items**:
+- Track all substitution choices
+- Note patterns in accepted vs rejected substitutions
+- Learn which ingredient families users prefer
+- Use substitution data to refine ingredient preferences
+
+## Cultural and Regional Preferences
+
+### Regional Food Patterns
+Users often have preferences based on regional backgrounds:
+- **North Indian**: Preference for rich gravies, bread-based meals, dairy products
+- **South Indian**: Preference for rice-based meals, coconut, fermented foods
+- **East Indian**: Preference for fish, rice, mustard oil, sweets
+- **West Indian**: Preference for coastal seafood, coconut curries, spicy flavors
+
+**How to Learn**:
+- Ask about regional background during onboarding
+- Observe patterns in cuisine preferences
+- Note which regional dishes get positive feedback
+- Track requests for specific regional preparations
+
+### Festival and Comfort Foods
+Users have emotional connections to certain foods:
+- **Festival foods**: Special foods for holidays and celebrations
+- **Comfort foods**: Foods associated with comfort, nostalgia, home
+- **Childhood favorites**: Foods from childhood that bring joy
+- **Family traditions**: Foods associated with family gatherings
+
+**How to Learn**:
+- Ask about favorite childhood foods during onboarding
+- Note requests around festivals and holidays
+- Track "comfort food" requests
+- Observe patterns in special occasion meal requests
+
+## Household Dynamics
+
+### Multi-Member Preference Balancing
+When multiple residents share a household:
+- **Common preferences**: What do all members like?
+- **Conflicting preferences**: How to balance different preferences?
+- **Compromise strategies**: When to alternate, when to combine preferences
+- **Individual vs shared**: When to personalize vs create shared meals
+
+**How to Learn**:
+- Track preferences per resident
+- Identify common ground preferences
+- Note successful compromise meals
+- Observe patterns in household meal satisfaction
+
+### Preference Hierarchy
+Some preferences are more important than others:
+- **Non-negotiable**: Allergies, strong dislikes, health constraints
+- **Strong preferences**: Strong likes, frequency needs
+- **Mild preferences**: Nice-to-haves, occasional preferences
+- **Flexible**: Areas where user is open to variety
+
+**How to Learn**:
+- Ask explicitly about non-negotiable preferences
+- Observe which preferences users are willing to compromise on
+- Note when users accept meals outside stated preferences
+- Track satisfaction when preferences are vs aren't met
+
+## Preference Evolution
+
+### Tracking Changes Over Time
+User preferences evolve:
+- **Seasonal shifts**: Preferences change with seasons
+- **Health-driven changes**: Preferences change based on health goals
+- **Exposure effects**: Trying new foods expands preferences
+- **Life stage changes**: Preferences change with life circumstances
+
+**How to Learn**:
+- Regularly review preference patterns
+- Note when preferences shift
+- Track successful introduction of new foods
+- Observe correlation between health goals and preference changes
+
+### Preference Refinement
+As you learn more, preferences become more nuanced:
+- **Start broad**: Initial preferences are often broad categories
+- **Refine over time**: Preferences become more specific with experience
+- **Identify sub-preferences**: Learn preferences within categories
+- **Contextual preferences**: Learn when preferences apply vs don't
+
+**Action Items**:
+- Regularly update preference profiles
+- Ask clarifying questions when patterns emerge
+- Test refined preferences with small variations
+- Validate refined preferences through feedback
+
+## Questioning Techniques
+
+### Subtle Preference Discovery
+Ask questions that reveal preferences without being intrusive:
+- "I noticed you often request extra protein - is that something you prefer?"
+- "Do you prefer your vegetables crispy or tender?"
+- "Would you like variety this week or stick to favorites?"
+- "I see you often skip breakfast - would you prefer lighter breakfast options?"
+
+### Preference Validation
+Confirm suspected preferences:
+- "Based on your past orders, you seem to prefer X - is that correct?"
+- "I've noticed you often request Y - should I incorporate that more often?"
+- "You've rated Z-type meals highly - would you like more of those?"
+
+### Preference Exploration
+Explore areas where preferences are unclear:
+- "What types of textures do you prefer in your meals?"
+- "How do you feel about trying new cuisines vs sticking to favorites?"
+- "Are there any foods you prefer at specific times of day?"
+
+## Implementation Guidelines
+
+### When to Apply Preferences
+- **Always apply**: Non-negotiable preferences (allergies, strong dislikes)
+- **Frequently apply**: Strong preferences, frequency needs
+- **Occasionally apply**: Mild preferences, variety needs
+- **Flexibly apply**: Preferences that enhance but don't constrain
+
+### Preference Confidence Levels
+- **High confidence**: Preferences observed multiple times, explicitly stated
+- **Medium confidence**: Patterns observed, but not explicitly confirmed
+- **Low confidence**: Single observation, needs validation
+- **Unknown**: No data, needs exploration
+
+### Preference Updates
+- **Regular review**: Review preferences monthly
+- **Update on feedback**: Update when feedback contradicts preferences
+- **Validate changes**: Confirm when preferences seem to shift
+- **Document evolution**: Track how preferences change over time
+
+## Red Flags and Edge Cases
+
+### Conflicting Preferences
+When preferences conflict:
+- Prioritize health constraints and allergies
+- Balance strong preferences across time
+- Communicate trade-offs clearly
+- Seek user input on prioritization
+
+### Unclear Preferences
+When preferences are unclear:
+- Ask clarifying questions
+- Offer options to test preferences
+- Use default preferences cautiously
+- Learn from user choices
+
+### Preference Fatigue
+When users seem tired of preferences:
+- Introduce variety within preferences
+- Suggest trying new things
+- Balance preferences with exploration
+- Respect user's desire for change
+

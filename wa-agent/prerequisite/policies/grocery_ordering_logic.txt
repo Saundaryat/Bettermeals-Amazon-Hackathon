@@ -1,0 +1,308 @@
+# Grocery Ordering Logic Guide
+
+## Overview
+This guide helps the User Agent understand principles for grocery cart building, pack size optimization, and ordering logic. While actual cart building is handled by tools, understanding these principles helps the agent explain decisions and handle user questions.
+
+## Cart Building
+
+### From Meal Plan to Grocery List
+**Process Overview**:
+1. **Extract Ingredients**: Identify all ingredients needed for meal plan
+2. **Aggregate Quantities**: Sum quantities across all meals
+3. **Check Inventory**: Determine what's already available
+4. **Calculate Needed**: Subtract inventory from required
+5. **Build Cart**: Add needed items to cart
+
+**Tool Usage**:
+- Use `generate_grocery_plan` to build the initial cart from a meal plan.
+
+**Key Considerations**:
+- **Accuracy**: Ensure all ingredients are included
+- **Quantities**: Calculate correct amounts needed
+- **Efficiency**: Minimize duplicate items
+- **Completeness**: Don't miss any ingredients
+
+**Agent's Role**:
+- Explain what's being added: "I'm building your cart from PLAN001"
+- Show progress: "Adding ingredients for [meals]"
+- Confirm completeness: "Your cart includes all ingredients for your meal plan"
+
+### Ingredient Aggregation
+**Summing Across Meals**:
+- If meal uses 200g tomatoes and another uses 300g: Total 500g needed
+- If multiple meals use same ingredient: Sum quantities
+- Account for shared ingredients: Don't double-count
+
+**Handling Units**:
+- Convert to common units: All to grams, or all to pieces
+- Account for pack sizes: May need to round up
+- Consider waste: Account for preparation waste
+
+**Example**:
+```
+Meal 1 needs: 200g tomatoes, 100g onions
+Meal 2 needs: 300g tomatoes, 150g onions
+Meal 3 needs: 100g tomatoes, 200g onions
+
+Total needed: 600g tomatoes, 450g onions
+```
+
+### Inventory Checking
+**What's Already Available**:
+- Use `get_inventory` to check user's pantry/inventory
+- Identify what's already on hand
+- Calculate what's actually needed
+
+**How to Handle**:
+- If item available: Don't add to cart (or add only if needed more)
+- If item low: Add to cart to replenish
+- If item sufficient: Skip adding
+
+**Agent Communication**:
+- "I see you already have [item] in your pantry, so I'm not adding it"
+- "You're low on [item], so I'm adding it to your cart"
+- "You have enough [item] for this week, so skipping it"
+
+## Pack Size Logic
+
+### Understanding Pack Sizes
+**Common Pack Sizes**:
+- **Vegetables**: 250g, 500g, 1kg packages
+- **Grains**: 500g, 1kg, 2kg packages
+- **Proteins**: 250g, 500g, 1kg packages
+- **Spices**: 50g, 100g, 200g packages
+
+**Challenge**: User needs 600g, but packs are 500g or 1kg
+
+**Optimization Goal**: Minimize waste while meeting needs
+
+### Pack Size Selection
+**Principles**:
+- **Meet Need**: Ensure enough for meal plan
+- **Minimize Waste**: Avoid excess that goes unused
+- **Consider Usage**: Will excess be used later?
+- **Cost Efficiency**: Sometimes larger pack = better value
+
+**Decision Logic**:
+- **Need 600g, packs 500g/1kg**: 
+  - If 1kg is reasonable excess (400g): Choose 1kg
+  - If 1kg is too much waste: Choose 2x 500g (if available)
+  - If excess will be used: Choose 1kg
+
+- **Need 300g, packs 250g/500g**:
+  - If 500g excess is reasonable: Choose 500g
+  - If excess too much: Choose 250g + consider if need more later
+
+**Agent Communication**:
+- "You need 600g tomatoes. I'm adding 1kg pack (400g excess, but you can use it)"
+- "You need 300g onions. I'm adding 500g pack (200g excess for next week)"
+- "You need 200g spinach. I'm adding 250g pack (minimal excess)"
+
+### Minimizing Waste
+**Strategies**:
+- **Plan for Excess**: If buying larger pack, plan meals that use excess
+- **Multi-Use Ingredients**: Choose ingredients used in multiple meals
+- **Storage Considerations**: Consider if excess can be stored
+- **Future Planning**: Consider if excess fits next week's plan
+
+**Agent Role**:
+- Explain pack size choices: "I chose 1kg because you'll use excess in [meal]"
+- Suggest using excess: "The extra [item] can be used in [suggestion]"
+- Acknowledge waste: "There will be some excess, but it's the smallest pack available"
+
+## Q-Commerce Integration
+
+### Fast Delivery Considerations
+**Q-Commerce Characteristics**:
+- **Fast Delivery**: Same-day or next-day delivery
+- **Smaller Orders**: More frequent, smaller orders
+- **Convenience**: Quick, easy ordering
+- **Local Sellers**: Often local, regional sellers
+
+**Implications for Planning**:
+- **Flexibility**: Can order more frequently
+- **Freshness**: Can order fresh items more often
+- **Smaller Quantities**: Don't need to stock up as much
+- **Last-Minute**: Can add items last minute
+
+**Agent Considerations**:
+- "Since you have fast delivery available, I'm ordering smaller quantities for freshness"
+- "You can always add items later if needed"
+- "I'm optimizing for freshness since delivery is fast"
+
+### Order Timing
+**When to Place Orders**:
+- **Weekly Planning**: After meal plan approval/saving (using `save_grocery_plan` or `update_inventory_from_grocery`)
+- **Before Meal Week**: Order arrives before meal week starts
+- **Consider Delivery Time**: Account for delivery window
+- **Consider Freshness**: Order close to when needed for freshness
+
+**Delivery Windows**:
+- **Same-Day**: Order morning, receive evening
+- **Next-Day**: Order today, receive tomorrow
+- **Scheduled**: Order for specific delivery date
+
+**Agent Communication**:
+- "I'll place your order now for delivery [date/time]"
+- "Your order will arrive [timing] before your meal week starts"
+- "Since delivery is fast, I'm ordering for [optimal timing]"
+
+## Cart Optimization
+
+### Grouping Items
+**Logical Grouping**:
+- **By Category**: Vegetables together, proteins together, etc.
+- **By Meal**: Group items by which meals they're for
+- **By Storage**: Items that need refrigeration together
+
+**Benefits**:
+- Easier to review
+- Easier to unpack and store
+- Better organization
+
+**Agent Communication**:
+- "Your cart is organized by category for easy review"
+- "Items are grouped by meal for your convenience"
+
+### Minimizing Orders
+**Consolidation Strategy**:
+- **Combine Needs**: If multiple items needed, order together
+- **Batch Orders**: Group items that can be ordered together
+- **Avoid Split Orders**: Don't split unnecessarily
+
+**When to Split**:
+- **Urgency**: Some items urgent, others can wait
+- **Availability**: Some items available now, others later
+- **Storage**: Some items need immediate use, others can wait
+
+**Agent Communication**:
+- "I'm consolidating your order to minimize deliveries"
+- "I'm splitting this into 2 orders: urgent items now, others later"
+
+## Inventory Checking
+
+### What's Already Available vs Needed
+**Inventory Check Process**:
+1. Use `get_inventory` to check current stock.
+2. Identify what's available
+3. Calculate what's needed for meal plan
+4. Determine what to add to cart
+
+**Handling Available Items**:
+- **Sufficient**: Skip adding, use what's available
+- **Insufficient**: Add difference needed
+- **Expiring Soon**: May want to use first, then add fresh
+
+**Agent Communication**:
+- "I see you have [item] in your pantry, so I'm not adding it"
+- "You have [quantity] of [item], but need [quantity], so adding [difference]"
+- "Your [item] expires soon, so I'm planning meals to use it first"
+
+### Inventory Management
+**Helping Users Manage Inventory**:
+- **Track Usage**: Note what's being used
+- **Suggest Using**: "You have [item] that should be used soon"
+- **Prevent Waste**: Plan meals to use items before they expire
+- **Replenish**: Add items when running low (using `update_inventory` manually if needed)
+
+**Agent Role**:
+- "I notice you have [item] that expires soon. I've included it in this week's meals"
+- "You're running low on [item]. I've added it to your cart"
+- "I've planned meals to use your existing [item] before adding more"
+
+## Order Timing
+
+### When to Place Orders
+**Optimal Timing**:
+- **After Plan Approval**: Once meal plan is approved
+- **Before Meal Week**: Arrive before meals are needed
+- **Consider Freshness**: Order close to when needed for maximum freshness
+- **Consider Storage**: Don't order too early if storage is limited
+
+**Delivery Considerations**:
+- **Delivery Window**: Account for delivery time
+- **User Availability**: Ensure user available to receive
+- **Storage Capacity**: Consider if user can store all items
+
+**Agent Communication**:
+- "I'll place your order now for delivery [date], arriving before your meal week"
+- "Your order will arrive [timing] to ensure freshness"
+- "I've scheduled delivery for [date] when you'll be available"
+
+### Order Frequency
+**Weekly Orders** (Typical):
+- Order once per week after meal plan approval
+- Covers entire week's meals
+- Efficient, reduces ordering frequency
+
+**More Frequent Orders**:
+- If user prefers fresher items
+- If storage is limited
+- If Q-commerce makes it convenient
+
+**Less Frequent Orders**:
+- If user prefers to stock up
+- If items have long shelf life
+- If delivery is less convenient
+
+**Agent Communication**:
+- "I'm placing a weekly order covering all your meals"
+- "Since you prefer fresh items, I can order twice weekly if you prefer"
+- "I've optimized for weekly ordering, but we can adjust if needed"
+
+## Best Practices
+
+### Grocery Ordering Principles
+**Efficiency**:
+- Minimize waste through pack size optimization
+- Consolidate orders when possible
+- Use inventory efficiently
+
+**Freshness**:
+- Order close to when needed
+- Consider Q-commerce advantages
+- Balance freshness with efficiency
+
+**User Experience**:
+- Clear communication about what's being ordered
+- Explain pack size choices
+- Help manage inventory
+
+**Cost Optimization**:
+- Choose cost-effective pack sizes
+- Minimize unnecessary items
+- Use inventory before adding more
+
+### Common Pitfalls to Avoid
+**Don't Over-Order**:
+- Don't add items user already has sufficient of
+- Don't choose pack sizes that create excessive waste
+- Don't order more than needed
+
+**Don't Under-Order**:
+- Ensure all ingredients are included
+- Ensure sufficient quantities
+- Don't miss items needed for meals
+
+**Don't Ignore Inventory**:
+- Always check what user already has
+- Use existing inventory efficiently
+- Don't duplicate unnecessarily
+
+**Don't Create Confusion**:
+- Explain pack size choices clearly
+- Explain why items are/aren't included
+- Help user understand cart contents
+
+### Grocery Ordering Checklist
+When building grocery carts, consider:
+- ✅ All ingredients from meal plan included
+- ✅ Quantities calculated correctly
+- ✅ Inventory checked and accounted for
+- ✅ Pack sizes optimized (minimize waste, meet needs)
+- ✅ Items grouped logically
+- ✅ Order timing optimized (freshness, delivery)
+- ✅ User's storage capacity considered
+- ✅ Cost efficiency considered
+- ✅ Clear communication about cart contents
+- ✅ Explanations for pack size choices

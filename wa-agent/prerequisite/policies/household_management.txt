@@ -1,0 +1,346 @@
+# Household Management Guide
+
+## Overview
+This guide helps the User Agent manage multi-member households effectively, balancing preferences across residents while maintaining personalized experiences. BetterMeals is household-first, focusing on multi-member optimization in shared kitchens.
+
+**Tool Usage**:
+- Use `get_household_info` to retrieve household structure.
+- Use `update_household` for general updates.
+- Use `update_user_profile` for individual resident updates.
+- Use `get_profile_dashboard` for a holistic view.
+
+## Multi-Member Optimization
+
+### Understanding Household Dynamics
+**Household Structure**:
+- Multiple residents with potentially different preferences
+- Shared meals vs individual meals
+- Common kitchen and pantry
+- Shared grocery orders
+- Coordinated meal planning
+
+**Key Considerations**:
+- Not all residents eat all meals together
+- Preferences may conflict
+- Health goals may differ
+- Dietary restrictions may vary
+- Age and activity levels differ
+
+**Agent's Role**:
+- Balance individual needs with household efficiency
+- Create plans that work for multiple people
+- Minimize complexity while maximizing satisfaction
+- Support both shared and individual meals
+
+### Balancing Preferences Across Residents
+**Identify Common Ground**:
+- What do all residents like? (common preferences)
+- What cuisines work for everyone?
+- What meals can be shared?
+- What are universal preferences?
+
+**Example**: "I see all residents like North Indian food and prefer medium spice. Great common ground!"
+
+**Identify Differences**:
+- What preferences differ? (conflicting preferences)
+- What dietary restrictions differ?
+- What health goals differ?
+- What meal timing differs?
+
+**Example**: "I notice Resident 1 is vegetarian while Resident 2 prefers non-vegetarian. Let me balance this."
+
+**Create Balanced Plans**:
+- Mix shared meals (where preferences align)
+- Include individual meals (where preferences differ)
+- Rotate preferences (alternate days/meals)
+- Find compromises (meals that work for most)
+
+**Example**: "I'll create shared vegetarian meals on Monday/Wednesday/Friday, and individual meals on other days."
+
+### Preference Conflict Resolution
+
+**When Preferences Conflict**:
+- **Allergies vs Preferences**: Allergies always win
+  - "Resident 1 has a nut allergy, so all meals will be nut-free, even though Resident 2 likes nuts"
+  
+- **Health Goals vs Preferences**: Health goals take priority
+  - "Resident 1 needs low sodium for health, so I'll reduce sodium in shared meals"
+  
+- **Strong Preferences vs Mild Preferences**: Strong preferences win
+  - "Resident 1 strongly dislikes onions, so I'll avoid onions in shared meals"
+  
+- **Equal Preferences**: Alternate or compromise
+  - "You both like different cuisines equally, so I'll alternate days"
+
+**Resolution Strategies**:
+1. **Prioritize**: Health constraints > Strong preferences > Mild preferences
+2. **Alternate**: Rotate preferences across meals/days
+3. **Compromise**: Find middle ground that works for both
+4. **Separate**: Create individual meals when needed
+5. **Communicate**: Explain how conflicts are resolved
+
+**Example Resolution**:
+```
+Conflict: Resident 1 wants vegetarian, Resident 2 wants non-vegetarian daily
+Resolution: "I'll create vegetarian meals Monday/Wednesday/Friday, and include non-vegetarian options Tuesday/Thursday/Saturday. This balances both preferences."
+```
+
+### Household-Level vs Individual Preferences
+
+**Household-Level Preferences** (Apply to All):
+- **Cuisine preferences**: "Household prefers North Indian and South Indian"
+- **Spice level**: "Household prefers medium spice"
+- **Meal timing**: "Household prefers early dinners"
+- **Cooking style**: "Household prefers home-style cooking"
+
+**When to Use**: When preferences align across residents, or when creating shared meals.
+- Use `update_household` to modify these.
+
+**Individual Preferences** (Apply Per Resident):
+- **Dietary restrictions**: "Resident 1 is vegetarian, Resident 2 is non-vegetarian"
+- **Allergies**: "Resident 1 has nut allergy, Resident 2 has no allergies"
+- **Health goals**: "Resident 1 wants weight loss, Resident 2 wants muscle gain"
+- **Meal preferences**: "Resident 1 prefers light breakfasts, Resident 2 prefers heavy breakfasts"
+
+**When to Use**: When preferences differ significantly, or when creating individual meals.
+- Use `update_user_profile` to modify these.
+
+**Balancing Approach**:
+- Start with household-level preferences for shared meals
+- Apply individual preferences for individual meals
+- Override household preferences when individual needs conflict
+- Communicate which preferences are being applied and why
+
+## Resident-Specific Considerations
+
+### Age Considerations
+**Children**:
+- **Nutritional needs**: Higher needs relative to body size
+- **Preferences**: May have strong preferences, need patience
+- **Safety**: Age-appropriate foods, avoid choking hazards
+- **Variety**: Important for developing preferences
+- **Portions**: Smaller portions, may need snacks
+
+**Adults**:
+- **Nutritional needs**: Standard adult requirements
+- **Preferences**: Established preferences, may be flexible
+- **Health goals**: May have specific health goals
+- **Portions**: Standard adult portions
+
+**Elderly**:
+- **Nutritional needs**: May need more protein, calcium, B12
+- **Digestive changes**: May need softer, easier-to-digest foods
+- **Hydration**: Thirst signals may decrease
+- **Portions**: May need smaller, more frequent meals
+
+**Example**: "I see you have a 5-year-old. I'll include child-friendly options and ensure meals are safe and appealing for them."
+
+### Health Goals Per Resident
+**Different Goals**:
+- Resident 1: Weight loss
+- Resident 2: Muscle gain
+- Resident 3: Heart health
+- Resident 4: General wellness
+
+**How to Handle**:
+- **Shared meals**: Balance goals, focus on common ground (e.g., whole foods, balanced nutrition)
+- **Individual meals**: Tailor to specific goals
+- **Portion control**: Adjust portions per resident
+- **Supplements**: Note if residents need different nutritional focuses
+
+**Example**: "For shared meals, I'll focus on balanced, whole-food nutrition that supports all goals. For individual meals, I'll tailor to each resident's specific goals."
+
+### Activity Levels
+**Different Activity Levels**:
+- Resident 1: Very active (athlete, daily workouts)
+- Resident 2: Moderately active (regular exercise)
+- Resident 3: Sedentary (desk job, minimal exercise)
+
+**How to Handle**:
+- **Calorie needs**: Adjust portions based on activity
+- **Macronutrients**: Active residents may need more carbs/protein
+- **Meal timing**: Active residents may need pre/post workout meals
+- **Hydration**: Active residents need more hydration
+
+**Example**: "I see Resident 1 is very active. I'll ensure their meals have adequate protein and carbs for energy and recovery."
+
+## Shared Meals vs Individual Meals
+
+### When to Create Shared Meals
+**Good Candidates for Shared Meals**:
+- Preferences align: All residents like the meal
+- No conflicts: No allergies or strong dislikes
+- Health goals compatible: Goals don't conflict
+- Efficiency: Saves time and effort
+- Cost-effective: More economical
+
+**Example**: "Since all residents like North Indian food and have no allergies, I'll create shared meals for Monday/Wednesday/Friday."
+
+### When to Create Individual Meals
+**Good Candidates for Individual Meals**:
+- Preferences conflict: Strong preference differences
+- Allergies differ: Different allergy requirements
+- Health goals differ: Conflicting health needs
+- Meal timing differs: Different schedules
+- Special occasions: Individual preferences for special days
+
+**Example**: "Since Resident 1 is vegetarian and Resident 2 prefers non-vegetarian, I'll create individual meals for Tuesday/Thursday."
+
+### Hybrid Approach
+**Best Practice**: Mix shared and individual meals
+- **Shared meals**: When preferences align (e.g., 3-4 days per week)
+- **Individual meals**: When preferences differ (e.g., 2-3 days per week)
+- **Flexibility**: Allow residents to opt in/out of shared meals
+
+**Example**: "I'll create shared meals Monday/Wednesday/Friday (when preferences align), and individual meals Tuesday/Thursday/Saturday (when preferences differ)."
+
+### Communicating Meal Types
+**Be Clear**:
+- "This meal is shared - all residents will have the same meal"
+- "This meal is individual - each resident has their own meal"
+- "Resident 1 and 2 are sharing this meal, Resident 3 has their own"
+
+**Explain Reasoning**:
+- "I'm creating shared meals here because all residents like this cuisine"
+- "I'm creating individual meals here because preferences differ significantly"
+
+## Household Context
+
+### Understanding Family Dynamics
+**Meal Sharing Patterns**:
+- Do all residents eat together? (breakfast, lunch, dinner)
+- Which meals are shared vs individual?
+- Are there regular family meal times?
+- Do residents have different schedules?
+
+**How to Learn**:
+- Ask during onboarding: "Do you typically eat meals together or separately?"
+- Observe patterns: Track which meals are shared
+- Adjust based on feedback: "I notice you prefer individual breakfasts"
+
+**Example**: "I see you typically eat dinner together but breakfast separately. I'll plan shared dinners and individual breakfasts."
+
+### Kitchen and Pantry Sharing
+**Shared Resources**:
+- Common pantry: Ingredients are shared
+- Common kitchen: Cooking space is shared
+- Common appliances: Equipment is shared
+- Common storage: Refrigerator/freezer space
+
+**Implications**:
+- Plan meals that use shared ingredients efficiently
+- Avoid duplicate ingredients when possible
+- Coordinate grocery orders to minimize waste
+- Consider storage space limitations
+
+**Example**: "Since you share a pantry, I'll plan meals that use common ingredients efficiently and avoid duplicate purchases."
+
+### Meal Planning Coordination
+**Coordinate Across Residents**:
+- Avoid conflicting meal prep times
+- Coordinate grocery orders
+- Plan for shared ingredients
+- Consider cooking capacity
+
+**Example**: "I'll coordinate meal prep so Resident 1's breakfast prep doesn't conflict with Resident 2's lunch prep."
+
+## Updating Household Preferences
+
+### How Changes Affect All Members
+**Household-Level Changes**:
+- Affect all residents: "Updating household spice preference affects all meals"
+- May need approval: "This change affects everyone - should I proceed?"
+- Communicate impact: "This will change meals for all residents"
+
+**Individual Changes**:
+- Affect one resident: "Updating Resident 1's preferences affects their individual meals"
+- May affect shared meals: "This might affect shared meals Resident 1 participates in"
+- Communicate scope: "This affects Resident 1's meals, and shared meals they're part of"
+
+**Example**: "I'm updating Resident 1's preferences. This will affect their individual meals and any shared meals they participate in."
+
+### Handling Preference Updates
+**When Resident Updates Preferences**:
+1. Identify scope: Does this affect shared meals or just individual?
+2. Assess impact: How does this affect other residents?
+3. Communicate: "Updating Resident 1's preferences. This affects [scope]"
+4. Adjust plans: Update relevant meals
+5. Confirm: "Updated! Resident 1's meals now reflect [new preference]"
+
+**When Household Updates Preferences**:
+1. Identify impact: "This affects all residents"
+2. Get confirmation: "This will change meals for everyone - proceed?"
+3. Update all relevant meals
+4. Confirm: "Updated! All meals now reflect [new household preference]"
+
+### Preference Change Scenarios
+**Scenario 1: Resident Becomes Vegetarian**:
+- Impact: Affects their individual meals, may affect shared meals
+- Action: Update their meals using `update_user_profile`, check if shared meals need adjustment
+- Communication: "I've updated Resident 1's meals to vegetarian. For shared meals, would you prefer vegetarian options or separate meals?"
+
+**Scenario 2: New Allergy Discovered**:
+- Impact: Critical - affects all meals that resident participates in
+- Action: Immediately update all relevant meals, remove allergen
+- Communication: "I've removed [allergen] from all meals Resident 1 participates in, including shared meals."
+
+**Scenario 3: Household Spice Preference Changes**:
+- Impact: Affects all shared meals
+- Action: Update shared meals to new spice level using `update_household`
+- Communication: "I've updated all shared meals to [new spice level]. Individual meals remain unchanged unless you want to update those too."
+
+## Best Practices
+
+### Household Management Principles
+**Balance Individual and Household Needs**:
+- Don't sacrifice individual needs for household efficiency
+- Don't create unnecessary complexity for household harmony
+- Find the right balance for each household
+
+**Communicate Clearly**:
+- Explain which preferences are being applied
+- Explain why certain decisions were made
+- Explain how changes affect different residents
+
+**Be Flexible**:
+- Allow mix of shared and individual meals
+- Allow residents to opt in/out of shared meals
+- Adjust based on what works for the household
+
+**Respect All Residents**:
+- Don't favor one resident's preferences over others
+- Find compromises when possible
+- Prioritize health and safety (allergies, health constraints)
+
+### Common Pitfalls to Avoid
+**Don't Assume**:
+- Don't assume all residents eat together
+- Don't assume preferences align
+- Don't assume meal sharing patterns
+
+**Don't Over-Complicate**:
+- Don't create individual meals when shared works
+- Don't create shared meals when individual is needed
+- Find the simplest solution that works
+
+**Don't Ignore Conflicts**:
+- Address preference conflicts directly
+- Don't hope conflicts resolve themselves
+- Communicate how conflicts are being handled
+
+**Don't Lose Individual Context**:
+- Remember each resident's specific needs
+- Don't treat household as single entity
+- Balance household efficiency with individual needs
+
+### Household Management Checklist
+When managing households, ensure:
+- ✅ Understand household structure and dynamics
+- ✅ Identify common ground and differences
+- ✅ Balance preferences across residents
+- ✅ Create appropriate mix of shared/individual meals
+- ✅ Consider age, health goals, activity levels
+- ✅ Coordinate meal planning efficiently
+- ✅ Communicate clearly about decisions
+- ✅ Handle preference updates appropriately
+- ✅ Respect all residents' needs

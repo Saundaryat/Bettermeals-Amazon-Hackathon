@@ -1,0 +1,231 @@
+# Cycle Syncing Guide
+
+## Overview
+Cycle Syncing is the tracking of the menstrual cycle to align nutrition, exercise, and lifestyle with hormonal fluctuations. This approach aims to optimize energy, mood, and overall well-being by acknowledging that a woman's nutritional needs change periodically, not just daily.
+
+The four phases are:
+1.  **Menstrual Phase** (Winter): Days 1-5 (approx)
+2.  **Follicular Phase** (Spring): Days 6-14 (approx)
+3.  **Ovulatory Phase** (Summer): Days 15-17 (approx)
+4.  **Luteal Phase** (Autumn): Days 18-28 (approx)
+
+## Phase 1: Menstrual Phase (The "Winter")
+**Days 1-5** (Start of period)
+*Estrogen and Progesterone are at their lowest levels.*
+
+### Physical & Emotional State
+- **Energy**: Low to moderate.
+- **Mood**: Introspective, potential irritability or calm.
+- **Symptoms**: Cramping, bloating, fatigue.
+- **Goals**: Rest, replenishment (especially iron), comfort.
+
+### Nutritional Focus
+- **Key Outcome**: Replenish iron lost through bleeding; reduce inflammation; provide comfort.
+- **Nutrients**: Iron, Vitamin C (for absorption), Magnesium (for cramps), Omega-3s.
+
+### Meal Planning Strategy
+- **Food Texture/Temp**: Warm, cooked, soothing foods. Avoid raw/cold foods which can be harder to digest.
+- **Key Ingredients**:
+    - **Proteins**: Red meat, kidney beans, lentils (iron sources).
+    - **Veggies**: Root vegetables, cooked leafy greens (spinach, kale), beets.
+    - **Grains**: Wild rice, buckwheat.
+    - **Comfort**: Dark chocolate, herbal teas (ginger, chamomile).
+- **Meal Examples**:
+    - Hearty lentil stew or Dal.
+    - Beef or mushroom broth.
+    - Warm oatmeal with seeds.
+
+### Agent Interaction
+- **Tone**: Gentle, nurturing, low-pressure.
+- **Checking In**: "How are your energy levels today?"
+- **Suggestion**: "Since you're in your menstrual phase, I've planned some warm, comforting stews rich in iron to help you replenish."
+
+---
+
+## Phase 2: Follicular Phase (The "Spring")
+**Days 6-14** (Post-period leading to ovulation)
+*Estrogen levels rise significantly.*
+
+### Physical & Emotional State
+- **Energy**: Increasing/High.
+- **Mood**: Outlook brightens, creative, social.
+- **Metabolism**: Slower (body preserves energy more efficienty).
+- **Goals**: Muscle building, fresh foods, variety.
+
+### Nutritional Focus
+- **Key Outcome**: Support energy rise; support gut health to metabolize estrogen properly.
+- **Nutrients**: Probiotics, Prebiotics, Antioxidants.
+
+### Meal Planning Strategy
+- **Food Texture/Temp**: Fresh, light, vibrant, sautéed or raw.
+- **Key Ingredients**:
+    - **Proteins**: Chicken, eggs, tofu.
+    - **Veggies**: Artichoke, broccoli, carrots, parsley, string beans, zucchini (fermented foods like kimchi).
+    - **Grains**: Oats, rye, wheat berries.
+    - **Fruits**: Avocado, grapefruit, pomegranate.
+- **Meal Examples**:
+    - Chicken stir-fry with broccoli and zucchini.
+    - Fresh grain salads using quinoa or oats.
+    - Kimchi fried rice or side salads.
+
+### Agent Interaction
+- **Tone**: Upbeat, encouraging variety.
+- **Suggestion**: "Your energy is rising! I've included some fresh, vibrant stir-fries and salads to match your natural spring phase."
+
+---
+
+## Phase 3: Ovulatory Phase (The "Summer")
+**Days 15-17** (Mid-cycle)
+*Estrogen peaks; Testosterone rises slightly.*
+
+### Physical & Emotional State
+- **Energy**: Peak energy.
+- **Mood**: Communicative, confident, high libido.
+- **Body Temperature**: Slightly higher.
+- **Goals**: Socializing, high-intensity activity support, liver support (to process peak estrogen).
+
+### Nutritional Focus
+- **Key Outcome**: Cool the body down; support liver detoxification of excess estrogen.
+- **Nutrients**: Fiber, Cruciferous compounds, Antioxidants.
+
+### Meal Planning Strategy
+- **Food Texture/Temp**: Raw, cooling, lighter meals.
+- **Key Ingredients**:
+    - **Proteins**: Fish (tuna, salmon), quinoa, lighter lentils.
+    - **Veggies**: Asparagus, brussels sprouts, chard, escarole, scallions, spinach.
+    - **Fruits**: Berries (antioxidants), figs, coconut.
+- **Meal Examples**:
+    - Grilled fish or light tuna salad.
+    - Quinoa bowls with plenty of raw veggies.
+    - Fruit smoothies.
+
+### Agent Interaction
+- **Tone**: Energetic, streamlined.
+- **Suggestion**: "You're likely at peak energy. I've kept meals light and fresh so you don't feel weighed down."
+
+---
+
+## Phase 4: Luteal Phase (The "Autumn")
+**Days 18-28** (Pre-period)
+*Progesterone rises (calming but can cause brain fog); Estrogen drops then rises slightly then drops.*
+
+### Physical & Emotional State
+- **Energy**: Winding down; potential "crashes".
+- **Mood**: Turning inward, PMS symptoms (anxiety, sadness, irritability), cravings.
+- **Metabolism**: Increases (requires more calories - ~100-300 more/day).
+- **Goals**: Stabilize blood sugar (curb cravings), reduce PMS, prepare for menstruation.
+
+### Nutritional Focus
+- **Key Outcome**: Curb sugar cravings with complex carbs; reduce bloating (magnesium/B6).
+- **Nutrients**: Magnesium, B-Vitamins, Complex Carbohydrates, Fiber.
+
+### Meal Planning Strategy
+- **Food Texture/Temp**: Roasted, baked, grounding foods.
+- **Key Ingredients**:
+    - **Proteins**: Chickpeas, turkey, beef.
+    - **Veggies**: Sweet potatoes, pumpkin, squash, cauliflower (roasted), cucumber (for bloating).
+    - **Grains**: Brown rice, millet.
+    - **Cravings**: Dark chocolate, apples, dates.
+- **Meal Examples**:
+    - Roasted sweet potato and chickpea bowls.
+    - Turkey chili or curry.
+    - Brown rice with roasted root vegetables.
+
+### Agent Interaction
+- **Tone**: Validating, steady, comforting.
+- **Suggestion**: "As you enter your luteal phase, I've added some grounding, roasted vegetables and complex carbs to keep your energy stable and satisfy cravings healthily."
+
+---
+
+## Agent Guidelines for Cycle Syncing
+
+### 1. Identifying the Phase
+The agent needs ONE data point to estimate the phase: **"When did your last period start?"** (Day 1).
+- **Day 1-5**: Menstrual
+- **Day 6-14**: Follicular
+- **Day 15-17**: Ovulatory
+- **Day 18-28**: Luteal
+
+*Note: Cycle lengths start at ~28 days but vary. Agent should ask "Do you have a typical cycle length?" if precise tracking is needed, otherwise assume standard 28-day model for general guidance.*
+
+### 2. Privacy & Respect
+- Always ask permission: "Would you like me to tailor your meal plan to your menstrual cycle phases?"
+- Be discreet but direct: Use standard terms ("Menstrual", "Luteal") or metaphors ("Winter phase", "Autumn phase") if user prefers.
+- Do not assume: Not all women menstruate or track cycles.
+
+### 3. Handling Symptoms
+If user complains of:
+- **Cramps**: Suggest Magnesium-rich foods (dark chocolate, leafy greens).
+- **Bloating**: Suggest cucumber, avoid salty foods, suggest tea.
+- **Fatigue**: Suggest iron-rich foods + Vitamin C.
+- **Cravings**: Suggest healthy swaps (fruit/dark chocolate instead of candy).
+
+### 4. Integration with Workflow
+- **During Meal Planning**:
+    1. Check if user profile has cycle tracking enabled/data.
+    2. If yes, calculate current phase.
+    3. Filter/Prioritize meals that match the phase recommendations.
+    4. **Explain**: "I've prioritized [Ingredient] this week because it's great for your [Phase Name]."
+
+## Handling Queries via Tools
+
+### 1. Planning Requests
+**User**: "Plan my meals around my cycle"
+- **Tools sequence**:
+    1. **Check Status**: `get_household_info(household_id)`.
+       - Check user profile/household field: `is_cycle_synced_enabled`.
+    2. **Fetch Data**: If enabled, call `get_cycle_data(household_id)`.
+       - Retrieve `last_period_date` (and `cycle_length` if available).
+    3. **Compute Phase**:
+       - Calculate: `(Current Date - Last Period Date) = Day in Cycle`
+       - Identify Phase:
+         - Day 1-5: Menstrual
+         - Day 6-14: Follicular
+         - Day 15-17: Ovulatory
+         - Day 18-28: Luteal
+    4. **Recommend Meals**:
+       - *Logic*: Use the computed Phase to recommend meals.
+
+### 2. Symptom Management
+**User**: "I have cramps, what should I eat?" or "I'm bloated."
+- **Tools**:
+    - `search_ingredients(query="magnesium rich foods")`: To find specific ingredient recommendations.
+    - `get_alternative_meals`: If tracking a meal that doesn't fit current needs (e.g., swapping a cold salad for a warm stew).
+- **Process**:
+    1. Identify symptom (Cramps → needs Magnesium).
+    2. Call `search_ingredients` or use internal knowledge.
+    3. Suggest: "Dark chocolate and leafy greens are great for cramps. Shall I add them?"
+
+### 3. Tracking & Status Updates
+**User**: "My period started today" or "Track my cycle."
+- **Tools**:
+    - `update_user_profile(user_id="...", data={"last_period_date": "YYYY-MM-DD"})`: Store the data point.
+- **Response**: "Got it. I've updated your profile. You're now in Day 1 (Menstrual Phase). I'll adjust your recommendations to include more iron-rich foods."
+
+### 4. Educational Questions
+**User**: "Why do I need iron now?"
+- **Tools**: None required (Knowledge Base).
+- **Response**: Explain based on the phase logic in this doc (e.g., "You lose iron during menstruation, so replenishing it helps prevent fatigue.").
+
+### 5. Explaining "Why" (Symptom Validation)
+**User**: "Why am I so tired?" or "Why am I craving sugar?"
+- **Tools**: None required (Knowledge Base).
+- **Process**:
+    1. **Identify Phase**: Check current estimated phase.
+    2. **Link to Hormones**: Explain the hormonal cause by referencing knowledge of that phase.
+    3. **Validate**: "It's completely normal."
+    4. **Solution**: Offer the nutritional fix.
+
+**Examples**:
+- **Fatigue (Luteal/Menstrual)**: "Progesterone is high (or iron is low), which naturally slows you down. Your body is working hard. Try [Iron/Complex Carbs] to boost energy steadily."
+- **Cravings (Luteal)**: "Your body needs more energy right now, so it signals for quick sugar. Complex carbs like sweet potatoes can satisfy that need without the crash."
+- **Social Fatigue (Luteal)**: "Estrogen is dropping, making you feel more introspective. It's a great time for cozy nights in rather than big social events."
+
+### Summary Reference Table
+
+| Phase | Duration | Vibe | Food Focus | Key Ingredients |
+| :--- | :--- | :--- | :--- | :--- |
+| **Menstrual** | Days 1-5 | Rest & Replenish | Warm, Iron-rich | Red meat, kidney beans, beets, broth |
+| **Follicular** | Days 6-14 | Fresh & Active | Light, Fermented | Chicken, eggs, kimchi, broccoli, oats |
+| **Ovulatory** | Days 15-17 | Peak Energy | Raw, Cooling | Fish, quinoa, berries, asparagus |
+| **Luteal** | Days 18-28 | Wind Down | Grounding, Complex Carbs | Sweet potato, brown rice, turkey, pumpkin |

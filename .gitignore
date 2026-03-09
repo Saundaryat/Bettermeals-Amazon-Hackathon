@@ -36,3 +36,25 @@ __pycache__/
 tmp/
 temp/
 *.tmp
+
+node_modules/
+*env*
+mock/
+*json
+images/
+
+__pycache__
+venv/
+*.zip
+*.log
+data/
+*key*
+.DS_Store
+
+
+### ask for these when needed
+.bedrock_agentcore.yaml
+.bedrock_agentcore/
+.agentcore.json
+tests/
+infrastructure.yaml

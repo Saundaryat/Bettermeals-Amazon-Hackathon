@@ -1,0 +1,405 @@
+# Meal Planning Principles Guide
+
+## Overview
+This guide helps the User Agent understand principles for creating balanced, personalized meal plans that meet user goals while maintaining satisfaction and adherence. These principles inform how the agent should think about meal planning, even though actual plan generation is handled by tools.
+
+## Balance Principles
+
+### Macronutrient Balance
+**Carbohydrates** (45-65% of calories):
+- **Role**: Primary energy source, especially for brain and muscles
+- **Sources**: Whole grains, fruits, vegetables, legumes
+- **Considerations**: 
+  - Prefer complex carbs for sustained energy
+  - Include fiber-rich sources
+  - Balance with protein and fats
+- **For Weight Loss**: Moderate carbs, focus on complex carbs
+- **For Energy**: Adequate carbs, especially around activity
+- **For Blood Sugar**: Low-GI carbs, balanced with protein/fat
+
+**Proteins** (10-35% of calories):
+- **Role**: Muscle maintenance, satiety, metabolism support
+- **Sources**: Legumes, dairy, meat, fish, eggs, nuts
+- **Considerations**:
+  - Distribute throughout day
+  - Include complete proteins (or combine complementary)
+  - Adequate for muscle maintenance/growth
+- **For Weight Loss**: Higher protein for satiety and muscle preservation
+- **For Muscle Gain**: Higher protein for growth and recovery
+- **For Aging**: Adequate protein to prevent muscle loss
+
+**Fats** (20-35% of calories):
+- **Role**: Hormone production, vitamin absorption, satiety
+- **Sources**: Nuts, seeds, oils, fatty fish, avocados
+- **Considerations**:
+  - Prefer unsaturated fats
+  - Include omega-3s
+  - Limit saturated fats
+- **For Heart Health**: Emphasize unsaturated fats, limit saturated
+- **For Brain Health**: Include omega-3s
+- **For Satiety**: Adequate healthy fats
+
+### Micronutrient Balance
+**Key Vitamins**:
+- **Vitamin D**: Fatty fish, fortified foods, sunlight
+- **B Vitamins**: Whole grains, legumes, animal products
+- **Vitamin C**: Citrus fruits, berries, bell peppers
+- **Folate**: Leafy greens, legumes
+
+**Key Minerals**:
+- **Iron**: Red meat, leafy greens, legumes (with vitamin C)
+- **Calcium**: Dairy, leafy greens, fortified foods
+- **Magnesium**: Nuts, seeds, whole grains
+- **Zinc**: Meat, shellfish, legumes
+
+**Balance Strategy**:
+- Include variety of fruits and vegetables (different colors)
+- Include diverse protein sources
+- Include whole grains
+- Consider supplementation needs (B12 for vegetarians, etc.)
+
+### Variety Balance
+**Cuisine Variety**:
+- Rotate cuisines: Don't repeat same cuisine daily
+- Include different regional cuisines
+- Balance familiar with new
+
+**Meal Type Variety**:
+- Different cooking methods: Steaming, sautéing, roasting, grilling
+- Different textures: Crunchy, soft, creamy, crispy
+- Different flavors: Sweet, savory, spicy, tangy
+
+**Ingredient Variety**:
+- Different vegetables each day
+- Different protein sources
+- Different grains/starches
+- Different preparation methods
+
+**Why Variety Matters**:
+- Prevents boredom and meal fatigue
+- Ensures diverse nutrient intake
+- Supports long-term adherence
+- Expands food preferences
+
+## Personalization
+
+### Incorporating Preferences
+**Dietary Preferences**:
+- Vegetarian, vegan, non-vegetarian: Respect user's choice
+- Cuisine preferences: Include preferred cuisines regularly
+- Spice level: Match user's spice tolerance
+- Texture preferences: Include preferred textures
+
+**Taste Preferences**:
+- Sweet, savory, spicy preferences
+- Flavor intensity preferences
+- Comfort food preferences
+- Adventurous vs familiar balance
+
+**Meal Timing Preferences**:
+- Breakfast preferences: Light vs heavy
+- Lunch preferences: Substantial vs light
+- Dinner preferences: Early vs late, light vs heavy
+- Snack preferences: When, what types
+
+**How to Incorporate**:
+- Start with user's stated preferences
+- Learn from order history and feedback
+- Balance preferences with health goals
+- Don't sacrifice health for preferences entirely
+
+### Incorporating Health Goals
+**Weight Management**:
+- **Weight Loss**: Calorie deficit, higher protein, fiber-rich foods
+- **Weight Gain**: Calorie surplus, nutrient-dense foods, adequate protein
+- **Maintenance**: Calorie balance, balanced macronutrients
+
+**Health Conditions**:
+- **Diabetes**: Low-GI carbs, regular meal timing, balanced meals
+- **Heart Health**: Limit saturated fats, include omega-3s, fiber
+- **Digestive Health**: High fiber, probiotics, easily digestible foods
+- **Hypertension**: Low sodium, potassium-rich foods
+
+**Performance Goals**:
+- **Athletic Performance**: Adequate carbs/protein, meal timing around workouts
+- **Mental Clarity**: Stable blood sugar, omega-3s, antioxidants
+- **Energy**: Balanced meals, regular timing, adequate carbs
+
+**How to Incorporate**:
+- Prioritize health goals over preferences when they conflict
+- Find balance: Meet health goals while maintaining satisfaction
+- Explain trade-offs: "This plan prioritizes [goal] while including [preferences]"
+
+### Incorporating Constraints
+**Allergies**:
+- **Critical**: Never include allergens
+- **Check all ingredients**: Hidden allergens in processed foods
+- **Cross-contamination**: Consider if severe allergy
+
+**Dietary Restrictions**:
+- Religious restrictions: Halal, kosher, etc.
+- Ethical restrictions: Vegetarian, vegan, etc.
+- Medical restrictions: Low sodium, diabetic, etc.
+
+**Budget Constraints**:
+- Cost-effective ingredients: Legumes, whole grains, seasonal produce
+- Minimize waste: Use ingredients across multiple meals
+- Balance nutrition with cost
+
+**Time Constraints**:
+- Quick prep meals: For busy days
+- Meal prep friendly: For batch cooking
+- Simple recipes: For limited cooking time
+
+**How to Incorporate**:
+- Always respect constraints (especially allergies)
+- Find creative solutions within constraints
+- Don't compromise on critical constraints (allergies, health)
+
+## Meal Timing
+
+### Breakfast Considerations
+**Purpose**: Break overnight fast, provide morning energy, kickstart metabolism
+
+**Key Principles**:
+- **Protein**: Include protein for satiety and energy
+- **Complex Carbs**: Provide sustained energy
+- **Fiber**: Support digestion and satiety
+- **Hydration**: Include fluids (water, tea, etc.)
+
+**Options**:
+- Light breakfast: For those who prefer it or have early lunch
+- Substantial breakfast: For those who prefer it or have late lunch
+- Protein-rich: For satiety and energy
+- Quick options: For busy mornings
+
+**Personalization**:
+- Match user's preference (light vs heavy)
+- Consider user's schedule (early vs late breakfast)
+- Consider user's activity level (active users may need more)
+
+### Lunch Considerations
+**Purpose**: Sustained afternoon energy, prevent crashes, maintain focus
+
+**Key Principles**:
+- **Balanced**: Include all macronutrients
+- **Substantial**: Enough to sustain until dinner
+- **Not too heavy**: Avoid afternoon slump
+- **Nutrient-dense**: Maximize nutrition
+
+**Options**:
+- Balanced plate: Protein, carbs, vegetables
+- One-pot meals: Convenient, balanced
+- Leftovers: Efficient, familiar
+- Fresh preparation: Variety, optimal nutrition
+
+**Personalization**:
+- Match user's schedule (early vs late lunch)
+- Consider afternoon activities (need sustained energy?)
+- Consider user's preference (light vs substantial)
+
+### Dinner Considerations
+**Purpose**: Satisfying meal, support sleep, complete daily nutrition
+
+**Key Principles**:
+- **Lighter**: Easier to digest, supports sleep
+- **Early timing**: 2-3 hours before bed
+- **Balanced**: Complete daily nutrition
+- **Satisfying**: Feel satisfied, not stuffed
+
+**Options**:
+- Lighter proteins: Fish, legumes vs heavy meats
+- Complex carbs: Support sleep (tryptophan → serotonin)
+- Vegetables: Complete micronutrient needs
+- Avoid heavy, fatty meals: Harder to digest
+
+**Personalization**:
+- Match user's schedule (early vs late dinner)
+- Consider sleep goals (lighter for better sleep)
+- Consider user's preference (some prefer heavier dinners)
+
+### Snack Considerations
+**Purpose**: Maintain energy, prevent overeating at meals, support goals
+
+**Key Principles**:
+- **Nutrient-dense**: Not empty calories
+- **Balanced**: Include protein/fiber for satiety
+- **Appropriate timing**: Between meals, before/after activity
+- **Portion-controlled**: Support goals, not derail them
+
+**Options**:
+- Protein + fruit: Balanced, satisfying
+- Nuts + fruit: Healthy fats, fiber, protein
+- Yogurt: Protein, probiotics
+- Vegetables + hummus: Fiber, protein
+
+**Personalization**:
+- Match user's snack preferences
+- Consider user's goals (weight loss vs maintenance)
+- Consider user's activity level (pre/post workout snacks)
+
+## Cuisine Variety
+
+### Rotating Cuisines
+**Why Rotate**:
+- Prevents meal fatigue
+- Ensures diverse nutrient intake
+- Expands food preferences
+- Maintains interest
+
+**How to Rotate**:
+- Different cuisine each day: Monday North Indian, Tuesday South Indian, etc.
+- Or: 2-3 cuisines per week, alternate
+- Or: Mix familiar with new cuisines
+
+**Considerations**:
+- User's preferred cuisines: Include regularly
+- User's less familiar cuisines: Introduce gradually
+- Balance: Don't force cuisines user dislikes
+
+### Avoiding Repetition
+**Meal Repetition**:
+- Don't repeat exact same meal within week
+- Don't repeat same meal type daily (e.g., curry every day)
+- Vary even within cuisine (different North Indian dishes)
+
+**Ingredient Repetition**:
+- Don't use same vegetables daily
+- Rotate protein sources
+- Vary grains/starches
+- Different preparation methods
+
+**Why Avoid Repetition**:
+- Prevents boredom
+- Ensures diverse nutrition
+- Maintains interest
+- Supports long-term adherence
+
+## Cost Considerations
+
+### Balancing Nutrition with Budget
+**Cost-Effective Strategies**:
+- **Legumes**: Inexpensive protein source
+- **Whole grains**: Economical, nutritious
+- **Seasonal produce**: Lower cost, better quality
+- **Batch cooking**: More efficient, lower cost per meal
+- **Minimize waste**: Use ingredients across multiple meals
+
+**When Cost is Concern**:
+- Prioritize nutrient-dense, cost-effective foods
+- Use expensive ingredients strategically (not daily)
+- Balance: Some cost-effective meals, some with premium ingredients
+- Explain trade-offs: "This plan balances nutrition with budget"
+
+**Budget-Friendly Meal Planning**:
+- Plan around sales and seasonal produce
+- Use whole foods vs processed (often cheaper)
+- Minimize food waste
+- Cook from scratch when possible
+
+## Seasonal Planning
+
+### Incorporating Seasonal Ingredients
+**Benefits**:
+- Better taste: Seasonal produce is fresher
+- Better nutrition: Peak nutritional value
+- Lower cost: Abundant = cheaper
+- Environmental: Supports local, reduces transport
+
+**How to Incorporate**:
+- Include seasonal vegetables and fruits
+- Plan meals around what's in season
+- Adjust cuisines to seasonal availability
+- Explain: "I'm including [seasonal item] because it's in season now"
+
+**Seasonal Considerations**:
+- **Summer**: Light, cooling foods, fresh produce
+- **Monsoon**: Warm, comforting foods, avoid leafy vegetables
+- **Winter**: Rich, warming foods, root vegetables
+- **Spring**: Fresh, light foods, new produce
+
+## Leftover Planning
+
+### Planning for Leftovers
+**Why Plan Leftovers**:
+- Reduces waste
+- Saves time and effort
+- More cost-effective
+- Convenient for busy days
+
+**How to Plan**:
+- Cook larger quantities: Plan for 2 meals
+- Design meals that reheat well: Curries, stews, casseroles
+- Plan leftover days: Designate days for leftovers
+- Transform leftovers: Use in new dishes
+
+**Leftover-Friendly Meals**:
+- Curries and stews: Reheat well, often taste better next day
+- Rice dishes: Biryani, pulao reheat well
+- Soups and dals: Reheat easily, maintain quality
+- Roasted vegetables: Can be used in salads, wraps
+
+**Communicating Leftover Plans**:
+- "This meal makes 4 servings - plan for 2 meals"
+- "Leftovers from Monday's dinner work great for Tuesday's lunch"
+- "I've planned this to minimize waste and save you time"
+
+## Best Practices
+
+### Meal Planning Principles Summary
+**Balance**:
+- Macronutrients: Carbs, proteins, fats
+- Micronutrients: Vitamins, minerals
+- Variety: Cuisines, ingredients, methods
+
+**Personalization**:
+- Preferences: Dietary, taste, timing
+- Health goals: Weight, health conditions, performance
+- Constraints: Allergies, budget, time
+
+**Practicality**:
+- Cost-effective: Balance nutrition with budget
+- Time-efficient: Consider prep time, leftovers
+- Sustainable: Patterns user can maintain long-term
+
+**Satisfaction**:
+- Variety: Prevents boredom
+- Preferences: Includes foods user enjoys
+- Flexibility: Allows for occasional indulgences
+
+### Common Pitfalls to Avoid
+**Don't Over-Optimize**:
+- Don't sacrifice satisfaction for perfect nutrition
+- Don't create plans user won't follow
+- Balance optimization with practicality
+
+**Don't Ignore Preferences**:
+- Don't force foods user dislikes
+- Don't ignore stated preferences
+- Find balance between preferences and goals
+
+**Don't Create Unrealistic Plans**:
+- Don't plan meals that are too complex
+- Don't plan meals that are too expensive
+- Don't plan meals that don't fit user's lifestyle
+
+**Don't Forget Variety**:
+- Don't repeat same meals
+- Don't use same ingredients daily
+- Don't stick to one cuisine
+
+### Meal Planning Checklist
+When thinking about meal plans, consider:
+- ✅ Balanced macronutrients (carbs, proteins, fats)
+- ✅ Diverse micronutrients (vitamins, minerals)
+- ✅ Variety in cuisines, ingredients, methods
+- ✅ User's dietary preferences
+- ✅ User's health goals
+- ✅ User's constraints (allergies, budget, time)
+- ✅ Meal timing considerations
+- ✅ Seasonal ingredients
+- ✅ Leftover planning
+- ✅ Cost considerations
+- ✅ Long-term sustainability
+- ✅ User satisfaction and adherence
+

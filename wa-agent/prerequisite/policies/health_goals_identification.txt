@@ -1,0 +1,336 @@
+# Health Goals Identification Guide
+
+## Overview
+This guide helps the User Agent identify, understand, and incorporate user health goals, constraints, and preferences into meal planning. The goal is to create personalized meal plans that support users' health objectives while maintaining satisfaction and adherence.
+
+## Weight Management Goals
+
+### Weight Loss
+**Identifying Signs**:
+- User mentions wanting to lose weight
+- References to "dieting" or "cutting calories"
+- Requests for "lighter" or "healthier" options
+- Mentions of specific weight targets or clothing sizes
+- References to previous weight loss attempts
+
+**Key Considerations**:
+- **Calorie deficit**: Create sustainable calorie deficit (typically 300-500 calories/day)
+- **Macronutrient balance**: Adequate protein (preserves muscle), moderate carbs, healthy fats
+- **Satiety**: Focus on high-fiber, high-protein meals that keep users full
+- **Sustainability**: Avoid extreme restrictions that lead to rebound
+- **Meal timing**: Some users benefit from intermittent fasting patterns
+
+**Questions to Ask**:
+- "What's your target weight or goal?"
+- "Have you tried weight loss before? What worked or didn't work?"
+- "Are you looking for gradual, sustainable weight loss or something more aggressive?"
+- "Do you prefer smaller, frequent meals or larger meals with longer gaps?"
+
+### Weight Gain
+**Identifying Signs**:
+- User mentions being underweight or wanting to gain weight
+- References to difficulty gaining weight
+- Requests for "more calories" or "heavier" meals
+- Mentions of athletic or fitness goals requiring weight gain
+- References to medical advice to gain weight
+
+**Key Considerations**:
+- **Calorie surplus**: Create moderate surplus (300-500 calories/day)
+- **Nutrient density**: Focus on nutrient-dense foods, not just calories
+- **Protein intake**: Adequate protein for muscle building
+- **Meal frequency**: May need more frequent meals or larger portions
+- **Healthy fats**: Incorporate healthy fats for calorie density
+
+**Questions to Ask**:
+- "What's your goal weight or target?"
+- "Are you looking to gain muscle or general weight?"
+- "Do you have difficulty eating large portions?"
+- "Are you working out? What's your activity level?"
+
+### Weight Maintenance
+**Identifying Signs**:
+- User mentions being happy with current weight
+- References to maintaining current state
+- Requests for balanced, varied meals
+- Mentions of not wanting to change weight
+
+**Key Considerations**:
+- **Calorie balance**: Maintain current weight with balanced calories
+- **Variety**: Focus on variety and satisfaction
+- **Nutrient quality**: Emphasize nutrient-dense foods
+- **Flexibility**: Allow for occasional indulgences
+- **Sustainability**: Maintain patterns that are sustainable long-term
+
+## Sleep Optimization
+
+### Identifying Sleep Issues
+**Signs to Look For**:
+- User mentions trouble sleeping or insomnia
+- References to feeling tired or low energy
+- Requests for meals that help with sleep
+- Mentions of late-night eating affecting sleep
+- References to sleep quality or duration concerns
+
+### Food-Sleep Connections
+**Evening Meal Considerations**:
+- **Timing**: Last meal 2-3 hours before bedtime
+- **Size**: Lighter dinners promote better sleep
+- **Macronutrients**: 
+  - Complex carbs can promote sleep (tryptophan → serotonin → melatonin)
+  - Protein provides tryptophan
+  - Avoid heavy, fatty meals close to bedtime
+- **Foods that help**: Turkey, milk, bananas, almonds, chamomile tea
+- **Foods to avoid**: Caffeine, alcohol, spicy foods, large meals
+
+**Questions to Ask**:
+- "Do you have trouble falling asleep or staying asleep?"
+- "What time do you typically eat dinner?"
+- "Do you notice any foods that affect your sleep?"
+- "What's your typical bedtime routine?"
+
+### Meal Timing for Sleep
+- **Breakfast**: Protein-rich breakfast can stabilize energy and sleep patterns
+- **Lunch**: Balanced lunch prevents afternoon crashes
+- **Dinner**: Light, early dinner supports better sleep
+- **Snacks**: Evening snacks should be light and sleep-supportive
+
+## Digestive Health
+
+### Identifying Digestive Issues
+**Signs to Look For**:
+- User mentions bloating, gas, or discomfort
+- References to specific foods causing issues
+- Mentions of digestive conditions (IBS, acid reflux, etc.)
+- Requests for "easy to digest" foods
+- References to food sensitivities or intolerances
+
+### Common Digestive Concerns
+**Bloating and Gas**:
+- **Causes**: High-FODMAP foods, carbonated drinks, eating too quickly
+- **Solutions**: Smaller meals, slower eating, identify trigger foods
+- **Foods to consider**: Low-FODMAP options, well-cooked vegetables
+
+**Acid Reflux**:
+- **Triggers**: Spicy foods, citrus, tomatoes, fatty foods, large meals
+- **Solutions**: Smaller meals, avoid triggers, elevate head while sleeping
+- **Foods to consider**: Non-acidic vegetables, lean proteins, whole grains
+
+**Constipation**:
+- **Causes**: Low fiber, inadequate hydration, lack of movement
+- **Solutions**: Increase fiber gradually, ensure hydration, include movement
+- **Foods to consider**: High-fiber foods, prunes, adequate fluids
+
+**Diarrhea/Irregularity**:
+- **Causes**: Food intolerances, infections, stress, certain foods
+- **Solutions**: Identify triggers, BRAT diet when needed, hydration
+- **Foods to consider**: Easily digestible foods, avoid triggers
+
+**Questions to Ask**:
+- "Do you experience any digestive discomfort after meals?"
+- "Are there specific foods that cause issues?"
+- "Have you been diagnosed with any digestive conditions?"
+- "Do you notice patterns in when digestive issues occur?"
+
+## Energy Management
+
+### Low Energy / Fatigue
+**Identifying Signs**:
+- User mentions feeling tired or low energy
+- References to afternoon crashes
+- Requests for "energy-boosting" foods
+- Mentions of difficulty concentrating
+- References to feeling sluggish
+
+**Key Considerations**:
+- **Blood sugar stability**: Avoid spikes and crashes
+- **Meal timing**: Regular meals prevent energy dips
+- **Macronutrient balance**: Balanced meals sustain energy
+- **Iron and B vitamins**: Important for energy production
+- **Hydration**: Dehydration causes fatigue
+
+**Questions to Ask**:
+- "When do you typically feel low energy?"
+- "Do you notice energy crashes after certain meals?"
+- "How's your sleep quality?"
+- "Are you getting enough iron and B vitamins?"
+
+### Sustained Energy Needs
+**For Active Users**:
+- **Pre-workout**: Light meal 1-2 hours before, easily digestible carbs
+- **Post-workout**: Protein + carbs within 2 hours for recovery
+- **Daily needs**: Adequate calories and nutrients for activity level
+
+**For Mental Clarity**:
+- **Stable blood sugar**: Prevents brain fog
+- **Omega-3s**: Support brain health
+- **Antioxidants**: Protect brain function
+- **Hydration**: Critical for cognitive function
+
+## Lab Results Interpretation
+
+### Common Lab Markers
+**Blood Sugar / HbA1c**:
+- **Elevated**: Indicates diabetes or prediabetes
+- **Action**: Low glycemic index foods, regular meal timing, carb management
+- **Questions**: "Have you been diagnosed with diabetes or prediabetes?"
+
+**Cholesterol**:
+- **Elevated LDL**: Focus on reducing saturated fats, increasing fiber
+- **Low HDL**: Increase healthy fats, exercise
+- **Elevated triglycerides**: Reduce refined carbs, manage weight
+
+**Iron / Hemoglobin**:
+- **Low**: Indicates anemia
+- **Action**: Iron-rich foods, vitamin C to enhance absorption
+- **Foods**: Leafy greens, legumes, lean meats, fortified foods
+
+**Vitamin D**:
+- **Low**: Common deficiency
+- **Action**: Fatty fish, fortified foods, sunlight exposure
+- **Consider**: Supplementation may be needed
+
+**B12**:
+- **Low**: Can cause fatigue, neurological issues
+- **Action**: Animal products, fortified foods
+- **Consider**: Supplementation for vegetarians/vegans
+
+**Questions to Ask**:
+- "Have you had recent lab tests? Any concerns?"
+- "Are there specific nutrients you're trying to optimize?"
+- "Have you been advised to focus on any particular health markers?"
+
+## Medical Constraints
+
+### Diabetes
+**Type 1**: Insulin-dependent, need consistent carb counting
+**Type 2**: May be managed with diet, medication, or both
+
+**Key Considerations**:
+- **Carb counting**: Consistent carb intake helps blood sugar management
+- **Glycemic index**: Prefer low-GI foods
+- **Meal timing**: Regular meals prevent blood sugar swings
+- **Fiber**: Helps stabilize blood sugar
+- **Portion control**: Important for blood sugar management
+
+**Questions to Ask**:
+- "What type of diabetes do you have?"
+- "How do you manage your blood sugar?"
+- "Are there specific foods or meal patterns that work well for you?"
+
+### Hypertension (High Blood Pressure)
+**Key Considerations**:
+- **Sodium reduction**: Limit processed foods, added salt
+- **Potassium**: Increase potassium-rich foods
+- **DASH diet principles**: Fruits, vegetables, whole grains, lean proteins
+- **Weight management**: If overweight, weight loss helps
+- **Alcohol**: Limit alcohol intake
+
+### Heart Health
+**Key Considerations**:
+- **Saturated fats**: Limit saturated and trans fats
+- **Omega-3s**: Include fatty fish, walnuts, flaxseeds
+- **Fiber**: Soluble fiber helps lower cholesterol
+- **Antioxidants**: Protect against inflammation
+- **Sodium**: Limit sodium intake
+
+### Kidney Health
+**Key Considerations**:
+- **Protein**: May need to limit protein
+- **Sodium**: Limit sodium
+- **Potassium/Phosphorus**: May need to limit depending on stage
+- **Fluid**: May need to manage fluid intake
+
+**Questions to Ask**:
+- "Have you been diagnosed with any medical conditions?"
+- "Are there dietary restrictions your doctor has recommended?"
+- "Are you taking any medications that affect your diet?"
+
+## Performance Goals
+
+### Athletic Performance
+**Key Considerations**:
+- **Calorie needs**: Higher calorie needs for active users
+- **Protein**: Adequate protein for muscle repair and building
+- **Carb timing**: Carbs around workouts for performance
+- **Hydration**: Critical for performance
+- **Recovery**: Post-workout nutrition important
+
+**Questions to Ask**:
+- "What's your activity level and type of exercise?"
+- "Do you have specific performance goals?"
+- "How do you fuel before and after workouts?"
+
+### Mental Clarity and Focus
+**Key Considerations**:
+- **Stable blood sugar**: Prevents brain fog
+- **Omega-3s**: Support brain health
+- **Antioxidants**: Protect brain function
+- **B vitamins**: Important for cognitive function
+- **Hydration**: Critical for brain function
+
+## Life Stage Considerations
+
+### Pregnancy
+**Key Considerations**:
+- **Folate**: Critical for early pregnancy
+- **Iron**: Increased needs
+- **Calcium**: Important for bone health
+- **Protein**: Increased needs
+- **Food safety**: Avoid certain foods (raw fish, unpasteurized dairy)
+
+### Children's Needs
+**Key Considerations**:
+- **Growth**: Higher calorie and nutrient needs relative to body size
+- **Variety**: Important for developing preferences
+- **Safety**: Age-appropriate foods, avoid choking hazards
+- **Preferences**: May have strong preferences, need patience
+
+### Aging
+**Key Considerations**:
+- **Protein**: Important to prevent muscle loss
+- **Calcium/Vitamin D**: Bone health
+- **B12**: Absorption decreases with age
+- **Hydration**: Thirst signals may decrease
+- **Digestive changes**: May need softer, easier-to-digest foods
+
+## Questioning Techniques
+
+### Non-Intrusive Health Questions
+- "Are there any health goals you're working toward?"
+- "Do you have any dietary restrictions or health considerations I should know about?"
+- "Are there foods that make you feel better or worse?"
+- "Have you noticed any patterns in how food affects your energy or mood?"
+
+### Goal Prioritization
+When multiple goals exist:
+- "Which health goal is most important to you right now?"
+- "Are there goals that can work together, or do they conflict?"
+- "How can we balance your health goals with your food preferences?"
+
+### Validation
+- "Based on what you've told me, it sounds like [goal] is important - is that correct?"
+- "I want to make sure I understand your health priorities correctly..."
+- "Let me confirm what I understand about your health goals..."
+
+## Implementation Guidelines
+
+### Incorporating Health Goals
+1. **Identify primary goals**: What's most important right now?
+2. **Consider constraints**: What limitations exist?
+3. **Balance with preferences**: How to meet goals while maintaining satisfaction
+4. **Monitor and adjust**: Track progress, adjust as needed
+5. **Communicate clearly**: Explain how meals support goals
+
+### Goal Conflicts
+When goals conflict:
+- **Prioritize health**: Health constraints override preferences
+- **Communicate trade-offs**: Explain when goals conflict
+- **Seek user input**: Ask how to prioritize
+- **Find compromises**: Look for solutions that address multiple goals
+
+### Progress Tracking
+- **Regular check-ins**: Ask about progress toward goals
+- **Adjust as needed**: Modify approach based on results
+- **Celebrate wins**: Acknowledge progress
+- **Support setbacks**: Help get back on track
+

@@ -1,0 +1,15 @@
+strands-agents
+strands-agents-tools
+requests
+PyYAML
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+pydantic
+bedrock-agentcore
+bedrock-agentcore-starter-toolkit
+botocore
+boto3
+firebase-admin
+retrying
+pydantic-settings

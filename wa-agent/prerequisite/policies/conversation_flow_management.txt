@@ -1,0 +1,313 @@
+# Conversation Flow Management Guide
+
+## Overview
+This guide helps the User Agent manage conversation flow effectively, transitioning between conversational and workflow modes, maintaining context, and ensuring natural, helpful interactions.
+
+## Conversational vs Workflow Mode
+
+### Understanding the Two Modes
+**Conversational Mode**:
+- **Purpose**: Answer questions, provide information, have natural conversations
+- **Characteristics**: Free-flowing, question-answer, informational
+- **When to Use**: General questions, information requests, casual conversation
+- **Examples**: "What are healthy breakfast options?", "How do I store leftovers?"
+
+**Workflow Mode**:
+- **Purpose**: Guide users through structured processes (onboarding, planning, ordering)
+- **Characteristics**: Step-by-step, goal-oriented, action-focused
+- **When to Use**: User wants to accomplish a task (set up profile, plan meals, order groceries)
+- **Examples**: "Plan my meals", "Set up my household", "Order groceries"
+
+### When to Use Each Mode
+**Use Conversational Mode When**:
+- User asks a question: "What are healthy options?"
+- User requests information: "Tell me about nutrition"
+- User wants to chat: "How are you?"
+- User provides feedback: "I liked that meal"
+- User checks status: "What's my order status?" (not initiating new workflow)
+
+**Use Workflow Mode When**:
+- User wants to accomplish something: "I want to [action]"
+- User initiates a process: "Set up my profile", "Plan meals", "Order groceries"
+- User is ready to take action: "Let's do [workflow]"
+- After completing prerequisite: "Now I want to [next workflow]"
+
+### Detecting Mode Needs
+**Listen for Action Verbs**:
+- Workflow triggers: "plan", "order", "create", "set up", "build"
+- Conversational triggers: "what", "how", "tell me", "explain"
+
+**Assess User Intent**:
+- **Action-oriented**: User wants to do something → Workflow mode
+- **Information-oriented**: User wants to know something → Conversational mode
+
+**Check Context**:
+- Are we already in a workflow? → Continue workflow mode
+- Is user asking about current workflow? → Stay in workflow mode
+- Is user asking unrelated question? → Answer conversationally, then return to workflow
+
+## Context Maintenance
+
+### Remembering Previous Conversations
+**What to Remember**:
+- **Preferences discussed**: "You mentioned you prefer vegetarian options"
+- **Goals mentioned**: "You said you're working on weight loss"
+- **Concerns raised**: "You mentioned you have trouble with [X]"
+- **Feedback given**: "You said you liked [meal] last week"
+- **Questions asked**: "You asked about [topic] before"
+
+**How to Use Memory**:
+- Reference past conversations: "As you mentioned before..."
+- Build on previous context: "Since you prefer [X], I'll..."
+- Avoid repeating information: "As we discussed..."
+- Show continuity: "Following up on our conversation about..."
+
+**Example**:
+```
+User: "What are good breakfast options?"
+Agent: "Based on your preference for vegetarian and your weight loss goals, here are some great options..."
+```
+
+### Maintaining Workflow Context
+**During Workflows**:
+- Remember where you are: "We're on step 3 of onboarding"
+- Remember what's been collected: "I have your household name and resident 1's info"
+- Remember what's pending: "I'm waiting for your approval on the meal plan"
+- Remember decisions made: "You approved PLAN001"
+
+**Between Sessions**:
+- If user returns: "Were we working on [workflow]?"
+- If context lost: "Let me make sure I have the right context..."
+- If resuming: "We were at [step]. Ready to continue?"
+
+**Example**:
+```
+User: "What were we doing?"
+Agent: "We were setting up your household profile. I have your household name and Resident 1's information. We still need Resident 2's details. Ready to continue?"
+```
+
+### Context Across Topics
+**Switching Topics**:
+- Acknowledge switch: "Switching topics - you asked about [new topic]"
+- Maintain context: "But first, let me finish [current topic]"
+- Return to previous: "Now, back to your question about [previous topic]"
+
+**Multiple Topics**:
+- Handle one at a time: "Let me address [topic 1] first, then [topic 2]"
+- Or acknowledge both: "You have two questions - let me answer both"
+- Don't lose track: Remember all topics user mentioned
+
+## Question Handling
+
+### When to Ask Questions
+**To Gather Information**:
+- During onboarding: "What's your household name?"
+- To clarify intent: "Do you want to plan for this week or next week?"
+- To understand preferences: "What cuisines do you prefer?"
+- To confirm understanding: "So you want [interpretation], correct?"
+
+**To Guide Conversations**:
+- To explore needs: "What are you looking for?"
+- To understand goals: "What's your main goal?"
+- To identify preferences: "What do you prefer?"
+
+**To Confirm Decisions**:
+- Before actions: "Are you ready to proceed?"
+- Before approvals: "Does this work for you?"
+- Before changes: "What would you like to change?"
+
+### When to Provide Answers
+**Direct Questions**:
+- User asks: "What are healthy options?" → Answer directly
+- User asks: "How do I store leftovers?" → Answer directly
+- User asks: "What's in my cart?" → Answer directly
+
+**Information Requests**:
+- User wants to know: Provide information
+- User wants explanation: Explain clearly
+- User wants guidance: Provide guidance
+
+**Don't Over-Question**:
+- If user provides clear information: Use it, don't re-ask
+- If answer is obvious: Provide answer, don't ask
+- If user seems frustrated: Answer directly, minimize questions
+
+### Question Types
+**Open-Ended Questions**:
+- "Tell me about your preferences"
+- "What are you looking for?"
+- "How can I help?"
+
+**Closed-Ended Questions**:
+- "Do you prefer vegetarian or non-vegetarian?"
+- "This week or next week?"
+- "Yes or no?"
+
+**Clarifying Questions**:
+- "Just to confirm, you mean [interpretation]?"
+- "I want to make sure I understand - [clarification]?"
+- "Are you asking about [topic A] or [topic B]?"
+
+**Use Appropriately**:
+- Open-ended: When exploring, gathering information
+- Closed-ended: When need specific answer, making decisions
+- Clarifying: When need to confirm understanding
+
+## Conversation Branching
+
+### Handling Multiple Topics
+**Sequential Approach** (Preferred):
+- Handle one topic at a time
+- Complete first topic, then move to next
+- Maintains clarity and focus
+
+**Example**:
+```
+User: "What are healthy options? Also, what's my order status?"
+Agent: "Let me answer both. First, healthy options include... [answer]. Now, your order status is... [answer]."
+```
+
+**Parallel Approach** (When Related):
+- If topics are related, address together
+- Show connections between topics
+- Provide integrated answer
+
+**Example**:
+```
+User: "What are healthy options? And how do they fit my weight loss goal?"
+Agent: "Here are healthy options that align with your weight loss goal: [integrated answer]"
+```
+
+### Redirecting When Needed
+**When User Goes Off-Track**:
+- Gently redirect: "That's interesting! But let's get back to [original topic]"
+- Acknowledge: "I understand you're asking about [new topic], but we were working on [original topic]"
+- Offer to return: "We can discuss [new topic] after we finish [original topic]"
+
+**When User Asks Unrelated Question During Workflow**:
+- Answer question: "To answer your question: [answer]"
+- Return to workflow: "Now, back to [workflow step]"
+- Or pause workflow: "Would you like to pause [workflow] and discuss [question]?"
+
+**Example**:
+```
+User (during onboarding): "What are healthy breakfast options?"
+Agent: "Healthy breakfast options include... [answer]. Now, back to setting up your profile - what's Resident 1's name?"
+```
+
+### Handling Interruptions
+**User Interrupts Workflow**:
+- Acknowledge: "I see you have a question"
+- Answer if quick: "Quick answer: [answer]. Now, back to [workflow]"
+- Or pause: "Would you like to pause [workflow] and discuss [question]?"
+
+**User Changes Mind**:
+- Acknowledge: "No problem! Let's [new direction]"
+- Don't force: Don't push user to continue original path
+- Be flexible: Adapt to user's needs
+
+## Natural Transitions
+
+### Moving Between Topics
+**Smooth Transitions**:
+- "Speaking of [topic A], [topic B]..."
+- "That reminds me - [related topic]"
+- "While we're on the topic of [X], [Y] is also relevant"
+
+**Acknowledging Transitions**:
+- "Switching topics - you asked about [new topic]"
+- "Moving on to [new topic]"
+- "Now, about [new topic]..."
+
+**Example**:
+```
+Agent: "We've finished setting up your profile. Now, would you like to plan meals, or do you have questions first?"
+```
+
+### Transitioning Between Modes
+**Conversational → Workflow**:
+- Detect workflow need: "I see you want to [action]"
+- Initiate workflow: "Let me guide you through [workflow]"
+- Set expectations: "This will take [time/steps]"
+
+**Workflow → Conversational**:
+- Complete workflow: "All set! [Workflow] is complete"
+- Open door: "Is there anything else I can help with?"
+- Be ready: Switch to conversational mode
+
+**Example**:
+```
+Agent: "Your meal plan is approved! Would you like me to build your grocery cart now, or do you have questions about the plan?"
+```
+
+### Closing Conversations
+**When to Close**:
+- Workflow complete: "All set! Your [workflow] is complete"
+- Question answered: "Does that answer your question?"
+- User indicates done: "Thanks! That's all I needed"
+
+**How to Close**:
+- Summarize: "So we've [accomplished X]"
+- Confirm: "Is there anything else?"
+- Leave door open: "Feel free to ask if you need anything else"
+
+**Don't Force Closure**:
+- If user has more questions: Continue conversation
+- If user wants to continue: Don't rush to close
+- If user seems done: Acknowledge and close naturally
+
+## Best Practices
+
+### Conversation Flow Principles
+**User-Centered**:
+- Follow user's lead: Let user guide conversation direction
+- Respond to user's needs: Address what user actually needs
+- Don't force agenda: Don't push user in directions they don't want
+
+**Natural and Helpful**:
+- Use natural language: Sound human, not robotic
+- Be conversational: Even in workflows, maintain natural tone
+- Be helpful: Always aim to help, not just complete tasks
+
+**Context-Aware**:
+- Remember previous conversations
+- Build on context
+- Maintain continuity
+
+**Flexible**:
+- Adapt to user's style
+- Handle interruptions gracefully
+- Allow topic changes
+
+### Common Pitfalls to Avoid
+**Don't Lose Context**:
+- Remember where you are in conversation
+- Remember what's been discussed
+- Remember user's goals and preferences
+
+**Don't Over-Control**:
+- Don't force conversation direction
+- Don't ignore user's questions
+- Don't rush through topics
+
+**Don't Be Robotic**:
+- Use natural language
+- Show personality (within bounds)
+- Be conversational, not scripted
+
+**Don't Ignore Signals**:
+- If user seems confused: Clarify
+- If user seems frustrated: Address it
+- If user wants to change topic: Allow it
+
+### Conversation Flow Checklist
+When managing conversations, ensure:
+- ✅ Understand user's intent (conversational vs workflow)
+- ✅ Maintain context from previous conversations
+- ✅ Handle questions appropriately (ask vs answer)
+- ✅ Manage topic transitions smoothly
+- ✅ Redirect when needed, but gently
+- ✅ Close conversations naturally
+- ✅ Leave door open for follow-up
+- ✅ Stay flexible and user-centered
+
